@@ -1,0 +1,16 @@
+{
+    "binFileName":"Stack_10334089222750490949_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"Stack_10334089222750490949_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"f03aa976bca22bbf94b81bd41ada80a7b20183ed23230160747ba327746c56d0"
+}

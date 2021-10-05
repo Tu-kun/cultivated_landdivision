@@ -1,0 +1,16 @@
+{
+    "binFileName":"te_fusion_conv2d_backprop_input_d_relu_grad_v2_1832392477690825463_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "cache_read_mode":0,
+    "kernelName":"te_fusion_conv2d_backprop_input_d_relu_grad_v2_1832392477690825463_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"c8e1153fee92dc74ac9f35f162e786b43298615e74ef7e62a59be02eb12b9642"
+}

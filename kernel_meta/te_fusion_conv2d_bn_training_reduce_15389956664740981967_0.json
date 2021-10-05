@@ -1,0 +1,17 @@
+{
+    "binFileName":"te_fusion_conv2d_bn_training_reduce_15389956664740981967_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"te_fusion_conv2d_bn_training_reduce_15389956664740981967_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        1,
+        1
+    ],
+    "sha256":"93a28d032eaf51a41d4038ff37aa3679d95e401abb8d684c217ef1409fa5b48e",
+    "weight_repeat":1
+}

@@ -1,0 +1,15 @@
+{
+    "binFileName":"te_fusion_conv2d_relu_848722004406935464_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "cache_read_mode":0,
+    "kernelName":"te_fusion_conv2d_relu_848722004406935464_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0
+    ],
+    "sha256":"919e2abe82b78e8e9046c3a20683beea198c10ab650be0052caf30f94261b3da"
+}

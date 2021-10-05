@@ -1,0 +1,13 @@
+{
+    "binFileName":"AtomicAddrClean_17286497422046255801_0",
+    "binFileSuffix":".o",
+    "blockDim":25,
+    "kernelName":"AtomicAddrClean_17286497422046255801_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0
+    ],
+    "sha256":"1cc55460d0d4238e655d9d9b06805a7e4f8e7f7497c657d675b292f66ce33043"
+}

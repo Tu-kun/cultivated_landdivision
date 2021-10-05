@@ -1,0 +1,15 @@
+{
+    "binFileName":"SoftmaxCrossEntropyWithLogits_3575371586615302439_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"SoftmaxCrossEntropyWithLogits_3575371586615302439_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"449fe76f8de0ab2cb597e5a2681eead352b56c63849100a722b12c76f8ec5ab2"
+}

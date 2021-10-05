@@ -1,0 +1,15 @@
+{
+    "binFileName":"MaxPoolGradWithArgmax_16048095739251661094_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"MaxPoolGradWithArgmax_16048095739251661094_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"37a65de5d98239666e71abe7974a777cd65c2c5913c3a8be0065c60109db732d"
+}

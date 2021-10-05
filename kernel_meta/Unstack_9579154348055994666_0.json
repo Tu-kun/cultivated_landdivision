@@ -1,0 +1,16 @@
+{
+    "binFileName":"Unstack_9579154348055994666_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"Unstack_9579154348055994666_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"7143cc280556d210a44657ec98e7ead8c3950e3855abfa5a8695c15a7f81aaa1"
+}

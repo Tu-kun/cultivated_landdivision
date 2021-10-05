@@ -1,0 +1,473 @@
+
+
+All Tensors:
+
+index:	size:	real_size:	offset:	addr:	type:	lifelong:	life_start:	life_end:	source node name:
+%0T	#1536S	#1024S	&0	&0	Common	0	0	224	Cast-op238
+%1T	#18944S	#18432S	&0	&0	Common	0	1	220	Cast-op241
+%2T	#92672S	#92160S	&0	&0	Common	0	2	216	Cast-op244
+%3T	#18944S	#18432S	&0	&0	Common	0	3	154	Cast-op250
+%4T	#18944S	#18432S	&0	&0	Common	0	4	99	Cast-op252
+%5T	#18944S	#18432S	&0	&0	Common	0	5	56	Cast-op257
+%6T	#16896S	#16384S	&0	&0	Common	0	6	209	Cast-op254
+%7T	#74240S	#73728S	&0	&0	Common	0	7	150	Cast-op265
+%8T	#18944S	#18432S	&0	&0	Common	0	8	23	Cast-op262
+%9T	#55808S	#55296S	&0	&0	Common	0	9	95	Cast-op267
+%10T	#37376S	#36864S	&0	&0	Common	0	10	52	Cast-op271
+%11T	#74240S	#73728S	&0	&0	Common	0	11	205	Cast-op269
+%12T	#9728S	#9216S	&0	&0	Common	0	12	18	Cast-op278
+%13T	#16896S	#16384S	&0	&0	Common	0	13	144	Cast-op286
+%14T	#16896S	#16384S	&0	&0	Common	0	14	90	Cast-op284
+%15T	#16896S	#16384S	&0	&0	Common	0	15	48	Cast-op282
+%16T	#4194816S	#4194304S	&0	&0	Common	0	16	17	TransData-op356
+%17T	#2097664S	#2097152S	&0	&0	Common	0	17	18	Cast-op277
+%18T	#4194816S	#4194304S	&0	&0	Common	0	18	19	Conv2D-op15
+%19T	#8389120S	#8388608S	&0	&0	Common	0	19	20	Cast-op272
+%20T	#8389120S	#8388608S	&0	&0	Common	0	20	21	BNInfer-op357
+%21T	#8389120S	#8388608S	&0	&0	Common	0	21	22	ReLU-op22
+%22T	#4194816S	#4194304S	&0	&0	Common	0	22	23	Cast-op261
+%23T	#4194816S	#4194304S	&0	&0	Common	0	23	24	Conv2D-op23
+%24T	#8389120S	#8388608S	&0	&0	Common	0	24	25	Cast-op255
+%25T	#8389120S	#8388608S	&0	&0	Common	0	25	26	BNInfer-op358
+%26T	#8389120S	#8388608S	&0	&0	Common	0	26	211	ReLU-op31
+%27T	#295424S	#294912S	&0	&0	Common	0	27	201	Cast-op280
+%28T	#74240S	#73728S	&0	&0	Common	0	28	140	Cast-op294
+%29T	#74240S	#73728S	&0	&0	Common	0	29	86	Cast-op292
+%30T	#74240S	#73728S	&0	&0	Common	0	30	43	Cast-op296
+%31T	#66048S	#65536S	&0	&0	Common	0	31	195	Cast-op298
+%32T	#221696S	#221184S	&0	&0	Common	0	32	136	Cast-op306
+%33T	#147968S	#147456S	&0	&0	Common	0	33	82	Cast-op304
+%34T	#37376S	#36864S	&0	&0	Common	0	34	38	Cast-op309
+%35T	#295424S	#294912S	&0	&0	Common	0	35	191	Cast-op308
+%36T	#4194816S	#4194304S	&0	&0	Common	0	36	37	Cast-op311
+%37T	#1049088S	#1048576S	&0	&0	Common	0	37	38	MaxPool-op33
+%38T	#2097664S	#2097152S	&0	&0	Common	0	38	39	Conv2D-op34
+%39T	#4194816S	#4194304S	&0	&0	Common	0	39	40	Cast-op302
+%40T	#4194816S	#4194304S	&0	&0	Common	0	40	41	BNInfer-op359
+%41T	#4194816S	#4194304S	&0	&0	Common	0	41	42	ReLU-op42
+%42T	#2097664S	#2097152S	&0	&0	Common	0	42	43	Cast-op295
+%43T	#2097664S	#2097152S	&0	&0	Common	0	43	44	Conv2D-op43
+%44T	#4194816S	#4194304S	&0	&0	Common	0	44	45	Cast-op289
+%45T	#4194816S	#4194304S	&0	&0	Common	0	45	46	BNInfer-op360
+%46T	#4194816S	#4194304S	&0	&0	Common	0	46	197	ReLU-op51
+%47T	#2097664S	#2097152S	&0	&0	Common	0	47	67	Cast-op281
+%48T	#4194816S	#4194304S	&0	&0	Common	0	48	49	Conv2DTranspose-op52
+%49T	#8389120S	#8388608S	&0	&0	Common	0	49	50	Cast-op274
+%50T	#16777728S	#16777216S	&0	&0	Common	0	50	51	Concat-op186
+%51T	#8389120S	#8388608S	&0	&0	Common	0	51	52	Cast-op270
+%52T	#4194816S	#4194304S	&0	&0	Common	0	52	53	Conv2D-op187
+%53T	#8389120S	#8388608S	&0	&0	Common	0	53	54	Cast-op263
+%54T	#8389120S	#8388608S	&0	&0	Common	0	54	55	ReLU-op189
+%55T	#4194816S	#4194304S	&0	&0	Common	0	55	56	Cast-op256
+%56T	#4194816S	#4194304S	&0	&0	Common	0	56	57	Conv2D-op190
+%57T	#8389120S	#8388608S	&0	&0	Common	0	57	58	Cast-op248
+%58T	#8389120S	#8388608S	&0	&0	Common	0	58	212	ReLU-op192
+%59T	#66048S	#65536S	&0	&0	Common	0	59	78	Cast-op315
+%60T	#66048S	#65536S	&0	&0	Common	0	60	131	Cast-op317
+%61T	#885248S	#884736S	&0	&0	Common	0	61	187	Cast-op319
+%62T	#295424S	#294912S	&0	&0	Common	0	62	127	Cast-op326
+%63T	#295424S	#294912S	&0	&0	Common	0	63	73	Cast-op324
+%64T	#262656S	#262144S	&0	&0	Common	0	64	182	Cast-op328
+%65T	#590336S	#589824S	&0	&0	Common	0	65	123	Cast-op333
+%66T	#147968S	#147456S	&0	&0	Common	0	66	68	Cast-op334
+%67T	#524800S	#524288S	&0	&0	Common	0	67	68	MaxPool-op53
+%68T	#1049088S	#1048576S	&0	&0	Common	0	68	69	Conv2D-op54
+%69T	#2097664S	#2097152S	&0	&0	Common	0	69	70	Cast-op330
+%70T	#2097664S	#2097152S	&0	&0	Common	0	70	71	BNInfer-op361
+%71T	#2097664S	#2097152S	&0	&0	Common	0	71	72	ReLU-op62
+%72T	#1049088S	#1048576S	&0	&0	Common	0	72	73	Cast-op323
+%73T	#1049088S	#1048576S	&0	&0	Common	0	73	74	Conv2D-op63
+%74T	#2097664S	#2097152S	&0	&0	Common	0	74	75	Cast-op320
+%75T	#2097664S	#2097152S	&0	&0	Common	0	75	76	BNInfer-op362
+%76T	#2097664S	#2097152S	&0	&0	Common	0	76	184	ReLU-op71
+%77T	#1049088S	#1048576S	&0	&0	Common	0	77	108	Cast-op314
+%78T	#2097664S	#2097152S	&0	&0	Common	0	78	79	Conv2DTranspose-op72
+%79T	#4194816S	#4194304S	&0	&0	Common	0	79	80	Cast-op310
+%80T	#8389120S	#8388608S	&0	&0	Common	0	80	81	Concat-op151
+%81T	#4194816S	#4194304S	&0	&0	Common	0	81	82	Cast-op303
+%82T	#2097664S	#2097152S	&0	&0	Common	0	82	83	Conv2D-op152
+%83T	#4194816S	#4194304S	&0	&0	Common	0	83	84	Cast-op299
+%84T	#4194816S	#4194304S	&0	&0	Common	0	84	85	ReLU-op154
+%85T	#2097664S	#2097152S	&0	&0	Common	0	85	86	Cast-op291
+%86T	#2097664S	#2097152S	&0	&0	Common	0	86	87	Conv2D-op155
+%87T	#4194816S	#4194304S	&0	&0	Common	0	87	88	Cast-op287
+%88T	#4194816S	#4194304S	&0	&0	Common	0	88	198	ReLU-op157
+%89T	#2097664S	#2097152S	&0	&0	Common	0	89	90	Cast-op283
+%90T	#4194816S	#4194304S	&0	&0	Common	0	90	91	Conv2DTranspose-op158
+%91T	#8389120S	#8388608S	&0	&0	Common	0	91	92	Cast-op275
+%92T	#16777728S	#16777216S	&0	&0	Common	0	92	93	Concat-op198
+%93T	#25166336S	#25165824S	&0	&0	Common	0	93	94	Concat-op199
+%94T	#12583424S	#12582912S	&0	&0	Common	0	94	95	Cast-op266
+%95T	#4194816S	#4194304S	&0	&0	Common	0	95	96	Conv2D-op200
+%96T	#8389120S	#8388608S	&0	&0	Common	0	96	97	Cast-op259
+%97T	#8389120S	#8388608S	&0	&0	Common	0	97	98	ReLU-op202
+%98T	#4194816S	#4194304S	&0	&0	Common	0	98	99	Cast-op251
+%99T	#4194816S	#4194304S	&0	&0	Common	0	99	100	Conv2D-op203
+%100T	#8389120S	#8388608S	&0	&0	Common	0	100	101	Cast-op246
+%101T	#8389120S	#8388608S	&0	&0	Common	0	101	213	ReLU-op205
+%102T	#1180160S	#1179648S	&0	&0	Common	0	102	178	Cast-op336
+%103T	#262656S	#262144S	&0	&0	Common	0	103	119	Cast-op340
+%104T	#2359808S	#2359296S	&0	&0	Common	0	104	174	Cast-op342
+%105T	#1180160S	#1179648S	&0	&0	Common	0	105	114	Cast-op346
+%106T	#1049088S	#1048576S	&0	&0	Common	0	106	170	Cast-op348
+%107T	#590336S	#589824S	&0	&0	Common	0	107	109	Cast-op351
+%108T	#262656S	#262144S	&0	&0	Common	0	108	109	MaxPool-op73
+%109T	#524800S	#524288S	&0	&0	Common	0	109	110	Conv2D-op74
+%110T	#1049088S	#1048576S	&0	&0	Common	0	110	111	Cast-op349
+%111T	#1049088S	#1048576S	&0	&0	Common	0	111	112	BNInfer-op363
+%112T	#1049088S	#1048576S	&0	&0	Common	0	112	113	ReLU-op82
+%113T	#524800S	#524288S	&0	&0	Common	0	113	114	Cast-op345
+%114T	#524800S	#524288S	&0	&0	Common	0	114	115	Conv2D-op83
+%115T	#1049088S	#1048576S	&0	&0	Common	0	115	116	Cast-op343
+%116T	#1049088S	#1048576S	&0	&0	Common	0	116	117	BNInfer-op364
+%117T	#1049088S	#1048576S	&0	&0	Common	0	117	172	ReLU-op91
+%118T	#524800S	#524288S	&0	&0	Common	0	118	159	Cast-op339
+%119T	#1049088S	#1048576S	&0	&0	Common	0	119	120	Conv2DTranspose-op92
+%120T	#2097664S	#2097152S	&0	&0	Common	0	120	121	Cast-op337
+%121T	#4194816S	#4194304S	&0	&0	Common	0	121	122	Concat-op129
+%122T	#2097664S	#2097152S	&0	&0	Common	0	122	123	Cast-op332
+%123T	#1049088S	#1048576S	&0	&0	Common	0	123	124	Conv2D-op130
+%124T	#2097664S	#2097152S	&0	&0	Common	0	124	125	Cast-op329
+%125T	#2097664S	#2097152S	&0	&0	Common	0	125	126	ReLU-op132
+%126T	#1049088S	#1048576S	&0	&0	Common	0	126	127	Cast-op325
+%127T	#1049088S	#1048576S	&0	&0	Common	0	127	128	Conv2D-op133
+%128T	#2097664S	#2097152S	&0	&0	Common	0	128	129	Cast-op321
+%129T	#2097664S	#2097152S	&0	&0	Common	0	129	185	ReLU-op135
+%130T	#1049088S	#1048576S	&0	&0	Common	0	130	131	Cast-op316
+%131T	#2097664S	#2097152S	&0	&0	Common	0	131	132	Conv2DTranspose-op136
+%132T	#4194816S	#4194304S	&0	&0	Common	0	132	133	Cast-op312
+%133T	#8389120S	#8388608S	&0	&0	Common	0	133	134	Concat-op163
+%134T	#12583424S	#12582912S	&0	&0	Common	0	134	135	Concat-op165
+%135T	#6291968S	#6291456S	&0	&0	Common	0	135	136	Cast-op305
+%136T	#2097664S	#2097152S	&0	&0	Common	0	136	137	Conv2D-op166
+%137T	#4194816S	#4194304S	&0	&0	Common	0	137	138	Cast-op300
+%138T	#4194816S	#4194304S	&0	&0	Common	0	138	139	ReLU-op168
+%139T	#2097664S	#2097152S	&0	&0	Common	0	139	140	Cast-op293
+%140T	#2097664S	#2097152S	&0	&0	Common	0	140	141	Conv2D-op169
+%141T	#4194816S	#4194304S	&0	&0	Common	0	141	142	Cast-op288
+%142T	#4194816S	#4194304S	&0	&0	Common	0	142	199	ReLU-op171
+%143T	#2097664S	#2097152S	&0	&0	Common	0	143	144	Cast-op285
+%144T	#4194816S	#4194304S	&0	&0	Common	0	144	145	Conv2DTranspose-op172
+%145T	#8389120S	#8388608S	&0	&0	Common	0	145	146	Cast-op276
+%146T	#16777728S	#16777216S	&0	&0	Common	0	146	147	Concat-op211
+%147T	#25166336S	#25165824S	&0	&0	Common	0	147	148	Concat-op213
+%148T	#33554944S	#33554432S	&0	&0	Common	0	148	149	Concat-op214
+%149T	#16777728S	#16777216S	&0	&0	Common	0	149	150	Cast-op264
+%150T	#4194816S	#4194304S	&0	&0	Common	0	150	151	Conv2D-op215
+%151T	#8389120S	#8388608S	&0	&0	Common	0	151	152	Cast-op258
+%152T	#8389120S	#8388608S	&0	&0	Common	0	152	153	ReLU-op217
+%153T	#4194816S	#4194304S	&0	&0	Common	0	153	154	Cast-op249
+%154T	#4194816S	#4194304S	&0	&0	Common	0	154	155	Conv2D-op218
+%155T	#8389120S	#8388608S	&0	&0	Common	0	155	156	Cast-op245
+%156T	#8389120S	#8388608S	&0	&0	Common	0	156	214	ReLU-op220
+%157T	#4719104S	#4718592S	&0	&0	Common	0	157	165	Cast-op353
+%158T	#2359808S	#2359296S	&0	&0	Common	0	158	160	Cast-op355
+%159T	#131584S	#131072S	&0	&0	Common	0	159	160	MaxPool-op93
+%160T	#262656S	#262144S	&0	&0	Common	0	160	161	Conv2D-op94
+%161T	#524800S	#524288S	&0	&0	Common	0	161	162	Cast-op354
+%162T	#524800S	#524288S	&0	&0	Common	0	162	163	BNInfer-op365
+%163T	#524800S	#524288S	&0	&0	Common	0	163	164	ReLU-op102
+%164T	#262656S	#262144S	&0	&0	Common	0	164	165	Cast-op352
+%165T	#262656S	#262144S	&0	&0	Common	0	165	166	Conv2D-op103
+%166T	#524800S	#524288S	&0	&0	Common	0	166	167	Cast-op350
+%167T	#524800S	#524288S	&0	&0	Common	0	167	168	BNInfer-op366
+%168T	#524800S	#524288S	&0	&0	Common	0	168	169	ReLU-op111
+%169T	#262656S	#262144S	&0	&0	Common	0	169	170	Cast-op347
+%170T	#524800S	#524288S	&0	&0	Common	0	170	171	Conv2DTranspose-op112
+%171T	#1049088S	#1048576S	&0	&0	Common	0	171	172	Cast-op344
+%172T	#2097664S	#2097152S	&0	&0	Common	0	172	173	Concat-op115
+%173T	#1049088S	#1048576S	&0	&0	Common	0	173	174	Cast-op341
+%174T	#524800S	#524288S	&0	&0	Common	0	174	175	Conv2D-op116
+%175T	#1049088S	#1048576S	&0	&0	Common	0	175	176	Cast-op338
+%176T	#1049088S	#1048576S	&0	&0	Common	0	176	177	ReLU-op118
+%177T	#524800S	#524288S	&0	&0	Common	0	177	178	Cast-op335
+%178T	#524800S	#524288S	&0	&0	Common	0	178	179	Conv2D-op119
+%179T	#1049088S	#1048576S	&0	&0	Common	0	179	180	Cast-op331
+%180T	#1049088S	#1048576S	&0	&0	Common	0	180	181	ReLU-op121
+%181T	#524800S	#524288S	&0	&0	Common	0	181	182	Cast-op327
+%182T	#1049088S	#1048576S	&0	&0	Common	0	182	183	Conv2DTranspose-op122
+%183T	#2097664S	#2097152S	&0	&0	Common	0	183	184	Cast-op322
+%184T	#4194816S	#4194304S	&0	&0	Common	0	184	185	Concat-op125
+%185T	#6291968S	#6291456S	&0	&0	Common	0	185	186	Concat-op137
+%186T	#3146240S	#3145728S	&0	&0	Common	0	186	187	Cast-op318
+%187T	#1049088S	#1048576S	&0	&0	Common	0	187	188	Conv2D-op138
+%188T	#2097664S	#2097152S	&0	&0	Common	0	188	189	Cast-op313
+%189T	#2097664S	#2097152S	&0	&0	Common	0	189	190	ReLU-op140
+%190T	#1049088S	#1048576S	&0	&0	Common	0	190	191	Cast-op307
+%191T	#1049088S	#1048576S	&0	&0	Common	0	191	192	Conv2D-op141
+%192T	#2097664S	#2097152S	&0	&0	Common	0	192	193	Cast-op301
+%193T	#2097664S	#2097152S	&0	&0	Common	0	193	194	ReLU-op143
+%194T	#1049088S	#1048576S	&0	&0	Common	0	194	195	Cast-op297
+%195T	#2097664S	#2097152S	&0	&0	Common	0	195	196	Conv2DTranspose-op144
+%196T	#4194816S	#4194304S	&0	&0	Common	0	196	197	Cast-op290
+%197T	#8389120S	#8388608S	&0	&0	Common	0	197	198	Concat-op147
+%198T	#12583424S	#12582912S	&0	&0	Common	0	198	199	Concat-op159
+%199T	#16777728S	#16777216S	&0	&0	Common	0	199	200	Concat-op173
+%200T	#8389120S	#8388608S	&0	&0	Common	0	200	201	Cast-op279
+%201T	#2097664S	#2097152S	&0	&0	Common	0	201	202	Conv2D-op174
+%202T	#4194816S	#4194304S	&0	&0	Common	0	202	203	Cast-op273
+%203T	#4194816S	#4194304S	&0	&0	Common	0	203	204	ReLU-op176
+%204T	#2097664S	#2097152S	&0	&0	Common	0	204	205	Cast-op268
+%205T	#2097664S	#2097152S	&0	&0	Common	0	205	206	Conv2D-op177
+%206T	#4194816S	#4194304S	&0	&0	Common	0	206	207	Cast-op260
+%207T	#4194816S	#4194304S	&0	&0	Common	0	207	208	ReLU-op179
+%208T	#2097664S	#2097152S	&0	&0	Common	0	208	209	Cast-op253
+%209T	#4194816S	#4194304S	&0	&0	Common	0	209	210	Conv2DTranspose-op180
+%210T	#8389120S	#8388608S	&0	&0	Common	0	210	211	Cast-op247
+%211T	#16777728S	#16777216S	&0	&0	Common	0	211	212	Concat-op183
+%212T	#25166336S	#25165824S	&0	&0	Common	0	212	213	Concat-op194
+%213T	#33554944S	#33554432S	&0	&0	Common	0	213	214	Concat-op207
+%214T	#41943552S	#41943040S	&0	&0	Common	0	214	215	Concat-op221
+%215T	#20972032S	#20971520S	&0	&0	Common	0	215	216	Cast-op243
+%216T	#4194816S	#4194304S	&0	&0	Common	0	216	217	Conv2D-op222
+%217T	#8389120S	#8388608S	&0	&0	Common	0	217	218	Cast-op242
+%218T	#8389120S	#8388608S	&0	&0	Common	0	218	219	ReLU-op224
+%219T	#4194816S	#4194304S	&0	&0	Common	0	219	220	Cast-op240
+%220T	#4194816S	#4194304S	&0	&0	Common	0	220	221	Conv2D-op225
+%221T	#8389120S	#8388608S	&0	&0	Common	0	221	222	Cast-op239
+%222T	#8389120S	#8388608S	&0	&0	Common	0	222	223	ReLU-op227
+%223T	#4194816S	#4194304S	&0	&0	Common	0	223	224	Cast-op237
+%224T	#2097664S	#2097152S	&0	&0	Common	0	224	225	Conv2D-op228
+%225T	#4194816S	#4194304S	&0	&0	Common	0	225	226	Cast-op236
+%226T	#524800S	#524288S	&0	&0	Common	0	226	227	TransData-op367
+%227T	#524800S	#524288S	&0	&0	Common	0	227	228	Transpose-op230
+%228T	#0S	#524288S	&0	&0	OutputOnly	0	228	228	Softmax-op231
+
+
+All Nodes:
+
+$0	Cast-op238	0	inputs[%0P, ]	outputs[%0T, ]	workspace[]	streamID[@0]
+$1	Cast-op241	0	inputs[%1P, ]	outputs[%1T, ]	workspace[]	streamID[@0]
+$2	Cast-op244	0	inputs[%2P, ]	outputs[%2T, ]	workspace[]	streamID[@0]
+$3	Cast-op250	0	inputs[%3P, ]	outputs[%3T, ]	workspace[]	streamID[@0]
+$4	Cast-op252	0	inputs[%4P, ]	outputs[%4T, ]	workspace[]	streamID[@0]
+$5	Cast-op257	0	inputs[%5P, ]	outputs[%5T, ]	workspace[]	streamID[@0]
+$6	Cast-op254	0	inputs[%6P, ]	outputs[%6T, ]	workspace[]	streamID[@0]
+$7	Cast-op265	0	inputs[%7P, ]	outputs[%7T, ]	workspace[]	streamID[@0]
+$8	Cast-op262	0	inputs[%8P, ]	outputs[%8T, ]	workspace[]	streamID[@0]
+$9	Cast-op267	0	inputs[%9P, ]	outputs[%9T, ]	workspace[]	streamID[@0]
+$10	Cast-op271	0	inputs[%10P, ]	outputs[%10T, ]	workspace[]	streamID[@0]
+$11	Cast-op269	0	inputs[%11P, ]	outputs[%11T, ]	workspace[]	streamID[@0]
+$12	Cast-op278	0	inputs[%12P, ]	outputs[%12T, ]	workspace[]	streamID[@0]
+$13	Cast-op286	0	inputs[%13P, ]	outputs[%13T, ]	workspace[]	streamID[@0]
+$14	Cast-op284	0	inputs[%14P, ]	outputs[%14T, ]	workspace[]	streamID[@0]
+$15	Cast-op282	0	inputs[%15P, ]	outputs[%15T, ]	workspace[]	streamID[@0]
+$16	TransData-op356	0	inputs[%16P, ]	outputs[%16T, ]	workspace[]	streamID[@0]
+$17	Cast-op277	0	inputs[%16T, ]	outputs[%17T, ]	workspace[]	streamID[@0]
+$18	Conv2D-op15	0	inputs[%17T, %12T, ]	outputs[%18T, ]	workspace[]	streamID[@0]
+$19	Cast-op272	0	inputs[%18T, ]	outputs[%19T, ]	workspace[]	streamID[@0]
+$20	BNInfer-op357	0	inputs[%19T, %17P, %18P, %19P, %20P, ]	outputs[%20T, ]	workspace[]	streamID[@0]
+$21	ReLU-op22	0	inputs[%20T, ]	outputs[%21T, ]	workspace[]	streamID[@0]
+$22	Cast-op261	0	inputs[%21T, ]	outputs[%22T, ]	workspace[]	streamID[@0]
+$23	Conv2D-op23	0	inputs[%22T, %8T, ]	outputs[%23T, ]	workspace[]	streamID[@0]
+$24	Cast-op255	0	inputs[%23T, ]	outputs[%24T, ]	workspace[]	streamID[@0]
+$25	BNInfer-op358	0	inputs[%24T, %21P, %22P, %23P, %24P, ]	outputs[%25T, ]	workspace[]	streamID[@0]
+$26	ReLU-op31	0	inputs[%25T, ]	outputs[%26T, ]	workspace[]	streamID[@0]
+$27	Cast-op280	0	inputs[%25P, ]	outputs[%27T, ]	workspace[]	streamID[@0]
+$28	Cast-op294	0	inputs[%26P, ]	outputs[%28T, ]	workspace[]	streamID[@0]
+$29	Cast-op292	0	inputs[%27P, ]	outputs[%29T, ]	workspace[]	streamID[@0]
+$30	Cast-op296	0	inputs[%28P, ]	outputs[%30T, ]	workspace[]	streamID[@0]
+$31	Cast-op298	0	inputs[%29P, ]	outputs[%31T, ]	workspace[]	streamID[@0]
+$32	Cast-op306	0	inputs[%30P, ]	outputs[%32T, ]	workspace[]	streamID[@0]
+$33	Cast-op304	0	inputs[%31P, ]	outputs[%33T, ]	workspace[]	streamID[@0]
+$34	Cast-op309	0	inputs[%32P, ]	outputs[%34T, ]	workspace[]	streamID[@0]
+$35	Cast-op308	0	inputs[%33P, ]	outputs[%35T, ]	workspace[]	streamID[@0]
+$36	Cast-op311	0	inputs[%26T, ]	outputs[%36T, ]	workspace[]	streamID[@0]
+$37	MaxPool-op33	0	inputs[%36T, ]	outputs[%37T, ]	workspace[]	streamID[@0]
+$38	Conv2D-op34	0	inputs[%37T, %34T, ]	outputs[%38T, ]	workspace[]	streamID[@0]
+$39	Cast-op302	0	inputs[%38T, ]	outputs[%39T, ]	workspace[]	streamID[@0]
+$40	BNInfer-op359	0	inputs[%39T, %34P, %35P, %36P, %37P, ]	outputs[%40T, ]	workspace[]	streamID[@0]
+$41	ReLU-op42	0	inputs[%40T, ]	outputs[%41T, ]	workspace[]	streamID[@0]
+$42	Cast-op295	0	inputs[%41T, ]	outputs[%42T, ]	workspace[]	streamID[@0]
+$43	Conv2D-op43	0	inputs[%42T, %30T, ]	outputs[%43T, ]	workspace[]	streamID[@0]
+$44	Cast-op289	0	inputs[%43T, ]	outputs[%44T, ]	workspace[]	streamID[@0]
+$45	BNInfer-op360	0	inputs[%44T, %38P, %39P, %40P, %41P, ]	outputs[%45T, ]	workspace[]	streamID[@0]
+$46	ReLU-op51	0	inputs[%45T, ]	outputs[%46T, ]	workspace[]	streamID[@0]
+$47	Cast-op281	0	inputs[%46T, ]	outputs[%47T, ]	workspace[]	streamID[@0]
+$48	Conv2DTranspose-op52	0	inputs[%47T, %15T, ]	outputs[%48T, ]	workspace[]	streamID[@0]
+$49	Cast-op274	0	inputs[%48T, ]	outputs[%49T, ]	workspace[]	streamID[@0]
+$50	Concat-op186	0	inputs[%49T, %26T, ]	outputs[%50T, ]	workspace[]	streamID[@0]
+$51	Cast-op270	0	inputs[%50T, ]	outputs[%51T, ]	workspace[]	streamID[@0]
+$52	Conv2D-op187	0	inputs[%51T, %10T, ]	outputs[%52T, ]	workspace[]	streamID[@0]
+$53	Cast-op263	0	inputs[%52T, ]	outputs[%53T, ]	workspace[]	streamID[@0]
+$54	ReLU-op189	0	inputs[%53T, ]	outputs[%54T, ]	workspace[]	streamID[@0]
+$55	Cast-op256	0	inputs[%54T, ]	outputs[%55T, ]	workspace[]	streamID[@0]
+$56	Conv2D-op190	0	inputs[%55T, %5T, ]	outputs[%56T, ]	workspace[]	streamID[@0]
+$57	Cast-op248	0	inputs[%56T, ]	outputs[%57T, ]	workspace[]	streamID[@0]
+$58	ReLU-op192	0	inputs[%57T, ]	outputs[%58T, ]	workspace[]	streamID[@0]
+$59	Cast-op315	0	inputs[%42P, ]	outputs[%59T, ]	workspace[]	streamID[@0]
+$60	Cast-op317	0	inputs[%43P, ]	outputs[%60T, ]	workspace[]	streamID[@0]
+$61	Cast-op319	0	inputs[%44P, ]	outputs[%61T, ]	workspace[]	streamID[@0]
+$62	Cast-op326	0	inputs[%45P, ]	outputs[%62T, ]	workspace[]	streamID[@0]
+$63	Cast-op324	0	inputs[%46P, ]	outputs[%63T, ]	workspace[]	streamID[@0]
+$64	Cast-op328	0	inputs[%47P, ]	outputs[%64T, ]	workspace[]	streamID[@0]
+$65	Cast-op333	0	inputs[%48P, ]	outputs[%65T, ]	workspace[]	streamID[@0]
+$66	Cast-op334	0	inputs[%49P, ]	outputs[%66T, ]	workspace[]	streamID[@0]
+$67	MaxPool-op53	0	inputs[%47T, ]	outputs[%67T, ]	workspace[]	streamID[@0]
+$68	Conv2D-op54	0	inputs[%67T, %66T, ]	outputs[%68T, ]	workspace[]	streamID[@0]
+$69	Cast-op330	0	inputs[%68T, ]	outputs[%69T, ]	workspace[]	streamID[@0]
+$70	BNInfer-op361	0	inputs[%69T, %50P, %51P, %52P, %53P, ]	outputs[%70T, ]	workspace[]	streamID[@0]
+$71	ReLU-op62	0	inputs[%70T, ]	outputs[%71T, ]	workspace[]	streamID[@0]
+$72	Cast-op323	0	inputs[%71T, ]	outputs[%72T, ]	workspace[]	streamID[@0]
+$73	Conv2D-op63	0	inputs[%72T, %63T, ]	outputs[%73T, ]	workspace[]	streamID[@0]
+$74	Cast-op320	0	inputs[%73T, ]	outputs[%74T, ]	workspace[]	streamID[@0]
+$75	BNInfer-op362	0	inputs[%74T, %54P, %55P, %56P, %57P, ]	outputs[%75T, ]	workspace[]	streamID[@0]
+$76	ReLU-op71	0	inputs[%75T, ]	outputs[%76T, ]	workspace[]	streamID[@0]
+$77	Cast-op314	0	inputs[%76T, ]	outputs[%77T, ]	workspace[]	streamID[@0]
+$78	Conv2DTranspose-op72	0	inputs[%77T, %59T, ]	outputs[%78T, ]	workspace[]	streamID[@0]
+$79	Cast-op310	0	inputs[%78T, ]	outputs[%79T, ]	workspace[]	streamID[@0]
+$80	Concat-op151	0	inputs[%79T, %46T, ]	outputs[%80T, ]	workspace[]	streamID[@0]
+$81	Cast-op303	0	inputs[%80T, ]	outputs[%81T, ]	workspace[]	streamID[@0]
+$82	Conv2D-op152	0	inputs[%81T, %33T, ]	outputs[%82T, ]	workspace[]	streamID[@0]
+$83	Cast-op299	0	inputs[%82T, ]	outputs[%83T, ]	workspace[]	streamID[@0]
+$84	ReLU-op154	0	inputs[%83T, ]	outputs[%84T, ]	workspace[]	streamID[@0]
+$85	Cast-op291	0	inputs[%84T, ]	outputs[%85T, ]	workspace[]	streamID[@0]
+$86	Conv2D-op155	0	inputs[%85T, %29T, ]	outputs[%86T, ]	workspace[]	streamID[@0]
+$87	Cast-op287	0	inputs[%86T, ]	outputs[%87T, ]	workspace[]	streamID[@0]
+$88	ReLU-op157	0	inputs[%87T, ]	outputs[%88T, ]	workspace[]	streamID[@0]
+$89	Cast-op283	0	inputs[%88T, ]	outputs[%89T, ]	workspace[]	streamID[@0]
+$90	Conv2DTranspose-op158	0	inputs[%89T, %14T, ]	outputs[%90T, ]	workspace[]	streamID[@0]
+$91	Cast-op275	0	inputs[%90T, ]	outputs[%91T, ]	workspace[]	streamID[@0]
+$92	Concat-op198	0	inputs[%91T, %26T, ]	outputs[%92T, ]	workspace[]	streamID[@0]
+$93	Concat-op199	0	inputs[%92T, %58T, ]	outputs[%93T, ]	workspace[]	streamID[@0]
+$94	Cast-op266	0	inputs[%93T, ]	outputs[%94T, ]	workspace[]	streamID[@0]
+$95	Conv2D-op200	0	inputs[%94T, %9T, ]	outputs[%95T, ]	workspace[]	streamID[@0]
+$96	Cast-op259	0	inputs[%95T, ]	outputs[%96T, ]	workspace[]	streamID[@0]
+$97	ReLU-op202	0	inputs[%96T, ]	outputs[%97T, ]	workspace[]	streamID[@0]
+$98	Cast-op251	0	inputs[%97T, ]	outputs[%98T, ]	workspace[]	streamID[@0]
+$99	Conv2D-op203	0	inputs[%98T, %4T, ]	outputs[%99T, ]	workspace[]	streamID[@0]
+$100	Cast-op246	0	inputs[%99T, ]	outputs[%100T, ]	workspace[]	streamID[@0]
+$101	ReLU-op205	0	inputs[%100T, ]	outputs[%101T, ]	workspace[]	streamID[@0]
+$102	Cast-op336	0	inputs[%58P, ]	outputs[%102T, ]	workspace[]	streamID[@0]
+$103	Cast-op340	0	inputs[%59P, ]	outputs[%103T, ]	workspace[]	streamID[@0]
+$104	Cast-op342	0	inputs[%60P, ]	outputs[%104T, ]	workspace[]	streamID[@0]
+$105	Cast-op346	0	inputs[%61P, ]	outputs[%105T, ]	workspace[]	streamID[@0]
+$106	Cast-op348	0	inputs[%62P, ]	outputs[%106T, ]	workspace[]	streamID[@0]
+$107	Cast-op351	0	inputs[%63P, ]	outputs[%107T, ]	workspace[]	streamID[@0]
+$108	MaxPool-op73	0	inputs[%77T, ]	outputs[%108T, ]	workspace[]	streamID[@0]
+$109	Conv2D-op74	0	inputs[%108T, %107T, ]	outputs[%109T, ]	workspace[]	streamID[@0]
+$110	Cast-op349	0	inputs[%109T, ]	outputs[%110T, ]	workspace[]	streamID[@0]
+$111	BNInfer-op363	0	inputs[%110T, %64P, %65P, %66P, %67P, ]	outputs[%111T, ]	workspace[]	streamID[@0]
+$112	ReLU-op82	0	inputs[%111T, ]	outputs[%112T, ]	workspace[]	streamID[@0]
+$113	Cast-op345	0	inputs[%112T, ]	outputs[%113T, ]	workspace[]	streamID[@0]
+$114	Conv2D-op83	0	inputs[%113T, %105T, ]	outputs[%114T, ]	workspace[]	streamID[@0]
+$115	Cast-op343	0	inputs[%114T, ]	outputs[%115T, ]	workspace[]	streamID[@0]
+$116	BNInfer-op364	0	inputs[%115T, %68P, %69P, %70P, %71P, ]	outputs[%116T, ]	workspace[]	streamID[@0]
+$117	ReLU-op91	0	inputs[%116T, ]	outputs[%117T, ]	workspace[]	streamID[@0]
+$118	Cast-op339	0	inputs[%117T, ]	outputs[%118T, ]	workspace[]	streamID[@0]
+$119	Conv2DTranspose-op92	0	inputs[%118T, %103T, ]	outputs[%119T, ]	workspace[]	streamID[@0]
+$120	Cast-op337	0	inputs[%119T, ]	outputs[%120T, ]	workspace[]	streamID[@0]
+$121	Concat-op129	0	inputs[%120T, %76T, ]	outputs[%121T, ]	workspace[]	streamID[@0]
+$122	Cast-op332	0	inputs[%121T, ]	outputs[%122T, ]	workspace[]	streamID[@0]
+$123	Conv2D-op130	0	inputs[%122T, %65T, ]	outputs[%123T, ]	workspace[]	streamID[@0]
+$124	Cast-op329	0	inputs[%123T, ]	outputs[%124T, ]	workspace[]	streamID[@0]
+$125	ReLU-op132	0	inputs[%124T, ]	outputs[%125T, ]	workspace[]	streamID[@0]
+$126	Cast-op325	0	inputs[%125T, ]	outputs[%126T, ]	workspace[]	streamID[@0]
+$127	Conv2D-op133	0	inputs[%126T, %62T, ]	outputs[%127T, ]	workspace[]	streamID[@0]
+$128	Cast-op321	0	inputs[%127T, ]	outputs[%128T, ]	workspace[]	streamID[@0]
+$129	ReLU-op135	0	inputs[%128T, ]	outputs[%129T, ]	workspace[]	streamID[@0]
+$130	Cast-op316	0	inputs[%129T, ]	outputs[%130T, ]	workspace[]	streamID[@0]
+$131	Conv2DTranspose-op136	0	inputs[%130T, %60T, ]	outputs[%131T, ]	workspace[]	streamID[@0]
+$132	Cast-op312	0	inputs[%131T, ]	outputs[%132T, ]	workspace[]	streamID[@0]
+$133	Concat-op163	0	inputs[%132T, %46T, ]	outputs[%133T, ]	workspace[]	streamID[@0]
+$134	Concat-op165	0	inputs[%133T, %88T, ]	outputs[%134T, ]	workspace[]	streamID[@0]
+$135	Cast-op305	0	inputs[%134T, ]	outputs[%135T, ]	workspace[]	streamID[@0]
+$136	Conv2D-op166	0	inputs[%135T, %32T, ]	outputs[%136T, ]	workspace[]	streamID[@0]
+$137	Cast-op300	0	inputs[%136T, ]	outputs[%137T, ]	workspace[]	streamID[@0]
+$138	ReLU-op168	0	inputs[%137T, ]	outputs[%138T, ]	workspace[]	streamID[@0]
+$139	Cast-op293	0	inputs[%138T, ]	outputs[%139T, ]	workspace[]	streamID[@0]
+$140	Conv2D-op169	0	inputs[%139T, %28T, ]	outputs[%140T, ]	workspace[]	streamID[@0]
+$141	Cast-op288	0	inputs[%140T, ]	outputs[%141T, ]	workspace[]	streamID[@0]
+$142	ReLU-op171	0	inputs[%141T, ]	outputs[%142T, ]	workspace[]	streamID[@0]
+$143	Cast-op285	0	inputs[%142T, ]	outputs[%143T, ]	workspace[]	streamID[@0]
+$144	Conv2DTranspose-op172	0	inputs[%143T, %13T, ]	outputs[%144T, ]	workspace[]	streamID[@0]
+$145	Cast-op276	0	inputs[%144T, ]	outputs[%145T, ]	workspace[]	streamID[@0]
+$146	Concat-op211	0	inputs[%145T, %26T, ]	outputs[%146T, ]	workspace[]	streamID[@0]
+$147	Concat-op213	0	inputs[%146T, %58T, ]	outputs[%147T, ]	workspace[]	streamID[@0]
+$148	Concat-op214	0	inputs[%147T, %101T, ]	outputs[%148T, ]	workspace[]	streamID[@0]
+$149	Cast-op264	0	inputs[%148T, ]	outputs[%149T, ]	workspace[]	streamID[@0]
+$150	Conv2D-op215	0	inputs[%149T, %7T, ]	outputs[%150T, ]	workspace[]	streamID[@0]
+$151	Cast-op258	0	inputs[%150T, ]	outputs[%151T, ]	workspace[]	streamID[@0]
+$152	ReLU-op217	0	inputs[%151T, ]	outputs[%152T, ]	workspace[]	streamID[@0]
+$153	Cast-op249	0	inputs[%152T, ]	outputs[%153T, ]	workspace[]	streamID[@0]
+$154	Conv2D-op218	0	inputs[%153T, %3T, ]	outputs[%154T, ]	workspace[]	streamID[@0]
+$155	Cast-op245	0	inputs[%154T, ]	outputs[%155T, ]	workspace[]	streamID[@0]
+$156	ReLU-op220	0	inputs[%155T, ]	outputs[%156T, ]	workspace[]	streamID[@0]
+$157	Cast-op353	0	inputs[%72P, ]	outputs[%157T, ]	workspace[]	streamID[@0]
+$158	Cast-op355	0	inputs[%73P, ]	outputs[%158T, ]	workspace[]	streamID[@0]
+$159	MaxPool-op93	0	inputs[%118T, ]	outputs[%159T, ]	workspace[]	streamID[@0]
+$160	Conv2D-op94	0	inputs[%159T, %158T, ]	outputs[%160T, ]	workspace[]	streamID[@0]
+$161	Cast-op354	0	inputs[%160T, ]	outputs[%161T, ]	workspace[]	streamID[@0]
+$162	BNInfer-op365	0	inputs[%161T, %74P, %75P, %76P, %77P, ]	outputs[%162T, ]	workspace[]	streamID[@0]
+$163	ReLU-op102	0	inputs[%162T, ]	outputs[%163T, ]	workspace[]	streamID[@0]
+$164	Cast-op352	0	inputs[%163T, ]	outputs[%164T, ]	workspace[]	streamID[@0]
+$165	Conv2D-op103	0	inputs[%164T, %157T, ]	outputs[%165T, ]	workspace[]	streamID[@0]
+$166	Cast-op350	0	inputs[%165T, ]	outputs[%166T, ]	workspace[]	streamID[@0]
+$167	BNInfer-op366	0	inputs[%166T, %78P, %79P, %80P, %81P, ]	outputs[%167T, ]	workspace[]	streamID[@0]
+$168	ReLU-op111	0	inputs[%167T, ]	outputs[%168T, ]	workspace[]	streamID[@0]
+$169	Cast-op347	0	inputs[%168T, ]	outputs[%169T, ]	workspace[]	streamID[@0]
+$170	Conv2DTranspose-op112	0	inputs[%169T, %106T, ]	outputs[%170T, ]	workspace[]	streamID[@0]
+$171	Cast-op344	0	inputs[%170T, ]	outputs[%171T, ]	workspace[]	streamID[@0]
+$172	Concat-op115	0	inputs[%171T, %117T, ]	outputs[%172T, ]	workspace[]	streamID[@0]
+$173	Cast-op341	0	inputs[%172T, ]	outputs[%173T, ]	workspace[]	streamID[@0]
+$174	Conv2D-op116	0	inputs[%173T, %104T, ]	outputs[%174T, ]	workspace[]	streamID[@0]
+$175	Cast-op338	0	inputs[%174T, ]	outputs[%175T, ]	workspace[]	streamID[@0]
+$176	ReLU-op118	0	inputs[%175T, ]	outputs[%176T, ]	workspace[]	streamID[@0]
+$177	Cast-op335	0	inputs[%176T, ]	outputs[%177T, ]	workspace[]	streamID[@0]
+$178	Conv2D-op119	0	inputs[%177T, %102T, ]	outputs[%178T, ]	workspace[]	streamID[@0]
+$179	Cast-op331	0	inputs[%178T, ]	outputs[%179T, ]	workspace[]	streamID[@0]
+$180	ReLU-op121	0	inputs[%179T, ]	outputs[%180T, ]	workspace[]	streamID[@0]
+$181	Cast-op327	0	inputs[%180T, ]	outputs[%181T, ]	workspace[]	streamID[@0]
+$182	Conv2DTranspose-op122	0	inputs[%181T, %64T, ]	outputs[%182T, ]	workspace[]	streamID[@0]
+$183	Cast-op322	0	inputs[%182T, ]	outputs[%183T, ]	workspace[]	streamID[@0]
+$184	Concat-op125	0	inputs[%183T, %76T, ]	outputs[%184T, ]	workspace[]	streamID[@0]
+$185	Concat-op137	0	inputs[%184T, %129T, ]	outputs[%185T, ]	workspace[]	streamID[@0]
+$186	Cast-op318	0	inputs[%185T, ]	outputs[%186T, ]	workspace[]	streamID[@0]
+$187	Conv2D-op138	0	inputs[%186T, %61T, ]	outputs[%187T, ]	workspace[]	streamID[@0]
+$188	Cast-op313	0	inputs[%187T, ]	outputs[%188T, ]	workspace[]	streamID[@0]
+$189	ReLU-op140	0	inputs[%188T, ]	outputs[%189T, ]	workspace[]	streamID[@0]
+$190	Cast-op307	0	inputs[%189T, ]	outputs[%190T, ]	workspace[]	streamID[@0]
+$191	Conv2D-op141	0	inputs[%190T, %35T, ]	outputs[%191T, ]	workspace[]	streamID[@0]
+$192	Cast-op301	0	inputs[%191T, ]	outputs[%192T, ]	workspace[]	streamID[@0]
+$193	ReLU-op143	0	inputs[%192T, ]	outputs[%193T, ]	workspace[]	streamID[@0]
+$194	Cast-op297	0	inputs[%193T, ]	outputs[%194T, ]	workspace[]	streamID[@0]
+$195	Conv2DTranspose-op144	0	inputs[%194T, %31T, ]	outputs[%195T, ]	workspace[]	streamID[@0]
+$196	Cast-op290	0	inputs[%195T, ]	outputs[%196T, ]	workspace[]	streamID[@0]
+$197	Concat-op147	0	inputs[%196T, %46T, ]	outputs[%197T, ]	workspace[]	streamID[@0]
+$198	Concat-op159	0	inputs[%197T, %88T, ]	outputs[%198T, ]	workspace[]	streamID[@0]
+$199	Concat-op173	0	inputs[%198T, %142T, ]	outputs[%199T, ]	workspace[]	streamID[@0]
+$200	Cast-op279	0	inputs[%199T, ]	outputs[%200T, ]	workspace[]	streamID[@0]
+$201	Conv2D-op174	0	inputs[%200T, %27T, ]	outputs[%201T, ]	workspace[]	streamID[@0]
+$202	Cast-op273	0	inputs[%201T, ]	outputs[%202T, ]	workspace[]	streamID[@0]
+$203	ReLU-op176	0	inputs[%202T, ]	outputs[%203T, ]	workspace[]	streamID[@0]
+$204	Cast-op268	0	inputs[%203T, ]	outputs[%204T, ]	workspace[]	streamID[@0]
+$205	Conv2D-op177	0	inputs[%204T, %11T, ]	outputs[%205T, ]	workspace[]	streamID[@0]
+$206	Cast-op260	0	inputs[%205T, ]	outputs[%206T, ]	workspace[]	streamID[@0]
+$207	ReLU-op179	0	inputs[%206T, ]	outputs[%207T, ]	workspace[]	streamID[@0]
+$208	Cast-op253	0	inputs[%207T, ]	outputs[%208T, ]	workspace[]	streamID[@0]
+$209	Conv2DTranspose-op180	0	inputs[%208T, %6T, ]	outputs[%209T, ]	workspace[]	streamID[@0]
+$210	Cast-op247	0	inputs[%209T, ]	outputs[%210T, ]	workspace[]	streamID[@0]
+$211	Concat-op183	0	inputs[%210T, %26T, ]	outputs[%211T, ]	workspace[]	streamID[@0]
+$212	Concat-op194	0	inputs[%211T, %58T, ]	outputs[%212T, ]	workspace[]	streamID[@0]
+$213	Concat-op207	0	inputs[%212T, %101T, ]	outputs[%213T, ]	workspace[]	streamID[@0]
+$214	Concat-op221	0	inputs[%213T, %156T, ]	outputs[%214T, ]	workspace[]	streamID[@0]
+$215	Cast-op243	0	inputs[%214T, ]	outputs[%215T, ]	workspace[]	streamID[@0]
+$216	Conv2D-op222	0	inputs[%215T, %2T, ]	outputs[%216T, ]	workspace[]	streamID[@0]
+$217	Cast-op242	0	inputs[%216T, ]	outputs[%217T, ]	workspace[]	streamID[@0]
+$218	ReLU-op224	0	inputs[%217T, ]	outputs[%218T, ]	workspace[]	streamID[@0]
+$219	Cast-op240	0	inputs[%218T, ]	outputs[%219T, ]	workspace[]	streamID[@0]
+$220	Conv2D-op225	0	inputs[%219T, %1T, ]	outputs[%220T, ]	workspace[]	streamID[@0]
+$221	Cast-op239	0	inputs[%220T, ]	outputs[%221T, ]	workspace[]	streamID[@0]
+$222	ReLU-op227	0	inputs[%221T, ]	outputs[%222T, ]	workspace[]	streamID[@0]
+$223	Cast-op237	0	inputs[%222T, ]	outputs[%223T, ]	workspace[]	streamID[@0]
+$224	Conv2D-op228	0	inputs[%223T, %0T, ]	outputs[%224T, ]	workspace[]	streamID[@0]
+$225	Cast-op236	0	inputs[%224T, ]	outputs[%225T, ]	workspace[]	streamID[@0]
+$226	TransData-op367	0	inputs[%225T, ]	outputs[%226T, ]	workspace[]	streamID[@0]
+$227	Transpose-op230	0	inputs[%226T, ]	outputs[%227T, ]	workspace[]	streamID[@0]
+$228	Softmax-op231	0	inputs[%227T, ]	outputs[%228T, ]	workspace[]	streamID[@0]
+
+
+All Stream Groups:
+
+stm0 
+

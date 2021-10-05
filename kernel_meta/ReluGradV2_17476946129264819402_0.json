@@ -1,0 +1,14 @@
+{
+    "binFileName":"ReluGradV2_17476946129264819402_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"ReluGradV2_17476946129264819402_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0
+    ],
+    "sha256":"6afb6e5f73bdb5aa14198c2d53f50b5ad63e7520a6e681ac6d93b6028cf12705"
+}

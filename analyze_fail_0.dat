@@ -1,0 +1,778 @@
+# [No.1] construct_wrapper.90
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(634)/    def construct(self, data, label):/
+funcgraph fg_90(
+        %para1 : Tensor(F32)[1, 3, 256, 256]    # data
+        , %para2 : Tensor(F32)[1, 2, 256, 256]    # label
+        , %para3 : Ref[Tensor(F32)][2, 32, 1, 1]    # net.final1.weight
+        , %para4 : Ref[Tensor(F32)][2, 32, 1, 1]    # net.final2.weight
+        , %para5 : Ref[Tensor(F32)][2, 32, 1, 1]    # net.final3.weight
+        , %para6 : Ref[Tensor(F32)][2, 32, 1, 1]    # net.final4.weight
+        , %para7 : Ref[Tensor(F32)][64, 32, 2, 2]    # net.up_concat01.up_conv.weight
+        , %para8 : Ref[Tensor(F32)][64, 32, 2, 2]    # net.up_concat02.up_conv.weight
+        , %para9 : Ref[Tensor(F32)][64, 32, 2, 2]    # net.up_concat03.up_conv.weight
+        , %para10 : Ref[Tensor(F32)][64, 32, 2, 2]    # net.up_concat04.up_conv.weight
+        , %para11 : Ref[Tensor(F32)][128, 64, 2, 2]    # net.up_concat11.up_conv.weight
+        , %para12 : Ref[Tensor(F32)][128, 64, 2, 2]    # net.up_concat12.up_conv.weight
+        , %para13 : Ref[Tensor(F32)][128, 64, 2, 2]    # net.up_concat13.up_conv.weight
+        , %para14 : Ref[Tensor(F32)][256, 128, 2, 2]    # net.up_concat21.up_conv.weight
+        , %para15 : Ref[Tensor(F32)][256, 128, 2, 2]    # net.up_concat22.up_conv.weight
+        , %para16 : Ref[Tensor(F32)][512, 256, 2, 2]    # net.up_concat31.up_conv.weight
+        , %para17 : Ref[Tensor(F32)][64, 32, 3, 3]    # net.conv10.convs.0.0.weight
+        , %para18 : Ref[Tensor(F32)][64, 64, 3, 3]    # net.conv10.convs.1.0.weight
+        , %para19 : Ref[Tensor(F32)][32, 3, 3, 3]    # net.conv00.convs.0.0.weight
+        , %para20 : Ref[Tensor(F32)][32, 32, 3, 3]    # net.conv00.convs.1.0.weight
+        , %para21 : Ref[Tensor(F32)][128, 64, 3, 3]    # net.conv20.convs.0.0.weight
+        , %para22 : Ref[Tensor(F32)][128, 128, 3, 3]    # net.conv20.convs.1.0.weight
+        , %para23 : Ref[Tensor(F32)][256, 128, 3, 3]    # net.conv30.convs.0.0.weight
+        , %para24 : Ref[Tensor(F32)][256, 256, 3, 3]    # net.conv30.convs.1.0.weight
+        , %para25 : Ref[Tensor(F32)][512, 256, 3, 3]    # net.conv40.convs.0.0.weight
+        , %para26 : Ref[Tensor(F32)][512, 512, 3, 3]    # net.conv40.convs.1.0.weight
+        , %para27 : Ref[Tensor(F32)][64]    # net.conv10.convs.0.1.gamma
+        , %para28 : Ref[Tensor(F32)][64]    # net.conv10.convs.0.1.beta
+        , %para29 : Ref[Tensor(F32)][64]    # net.conv10.convs.0.1.moving_mean
+        , %para30 : Ref[Tensor(F32)][64]    # net.conv10.convs.0.1.moving_variance
+        , %para31 : Ref[Tensor(F32)][64]    # net.conv10.convs.1.1.gamma
+        , %para32 : Ref[Tensor(F32)][64]    # net.conv10.convs.1.1.beta
+        , %para33 : Ref[Tensor(F32)][64]    # net.conv10.convs.1.1.moving_mean
+        , %para34 : Ref[Tensor(F32)][64]    # net.conv10.convs.1.1.moving_variance
+        , %para35 : Ref[Tensor(F32)][32]    # net.conv00.convs.0.1.gamma
+        , %para36 : Ref[Tensor(F32)][32]    # net.conv00.convs.0.1.beta
+        , %para37 : Ref[Tensor(F32)][32]    # net.conv00.convs.0.1.moving_mean
+        , %para38 : Ref[Tensor(F32)][32]    # net.conv00.convs.0.1.moving_variance
+        , %para39 : Ref[Tensor(F32)][32]    # net.conv00.convs.1.1.gamma
+        , %para40 : Ref[Tensor(F32)][32]    # net.conv00.convs.1.1.beta
+        , %para41 : Ref[Tensor(F32)][32]    # net.conv00.convs.1.1.moving_mean
+        , %para42 : Ref[Tensor(F32)][32]    # net.conv00.convs.1.1.moving_variance
+        , %para43 : Ref[Tensor(F32)][128]    # net.conv20.convs.0.1.gamma
+        , %para44 : Ref[Tensor(F32)][128]    # net.conv20.convs.0.1.beta
+        , %para45 : Ref[Tensor(F32)][128]    # net.conv20.convs.0.1.moving_mean
+        , %para46 : Ref[Tensor(F32)][128]    # net.conv20.convs.0.1.moving_variance
+        , %para47 : Ref[Tensor(F32)][128]    # net.conv20.convs.1.1.gamma
+        , %para48 : Ref[Tensor(F32)][128]    # net.conv20.convs.1.1.beta
+        , %para49 : Ref[Tensor(F32)][128]    # net.conv20.convs.1.1.moving_mean
+        , %para50 : Ref[Tensor(F32)][128]    # net.conv20.convs.1.1.moving_variance
+        , %para51 : Ref[Tensor(F32)][256]    # net.conv30.convs.0.1.gamma
+        , %para52 : Ref[Tensor(F32)][256]    # net.conv30.convs.0.1.beta
+        , %para53 : Ref[Tensor(F32)][256]    # net.conv30.convs.0.1.moving_mean
+        , %para54 : Ref[Tensor(F32)][256]    # net.conv30.convs.0.1.moving_variance
+        , %para55 : Ref[Tensor(F32)][256]    # net.conv30.convs.1.1.gamma
+        , %para56 : Ref[Tensor(F32)][256]    # net.conv30.convs.1.1.beta
+        , %para57 : Ref[Tensor(F32)][256]    # net.conv30.convs.1.1.moving_mean
+        , %para58 : Ref[Tensor(F32)][256]    # net.conv30.convs.1.1.moving_variance
+        , %para59 : Ref[Tensor(F32)][512]    # net.conv40.convs.0.1.gamma
+        , %para60 : Ref[Tensor(F32)][512]    # net.conv40.convs.0.1.beta
+        , %para61 : Ref[Tensor(F32)][512]    # net.conv40.convs.0.1.moving_mean
+        , %para62 : Ref[Tensor(F32)][512]    # net.conv40.convs.0.1.moving_variance
+        , %para63 : Ref[Tensor(F32)][512]    # net.conv40.convs.1.1.gamma
+        , %para64 : Ref[Tensor(F32)][512]    # net.conv40.convs.1.1.beta
+        , %para65 : Ref[Tensor(F32)][512]    # net.conv40.convs.1.1.moving_mean
+        , %para66 : Ref[Tensor(F32)][512]    # net.conv40.convs.1.1.moving_variance
+        , %para67 : Ref[Tensor(F32)][32, 64, 3, 3]    # net.up_concat01.conv.convs.0.0.weight
+        , %para68 : Ref[Tensor(F32)][32, 32, 3, 3]    # net.up_concat01.conv.convs.1.0.weight
+        , %para69 : Ref[Tensor(F32)][32, 96, 3, 3]    # net.up_concat02.conv.convs.0.0.weight
+        , %para70 : Ref[Tensor(F32)][32, 32, 3, 3]    # net.up_concat02.conv.convs.1.0.weight
+        , %para71 : Ref[Tensor(F32)][32, 128, 3, 3]    # net.up_concat03.conv.convs.0.0.weight
+        , %para72 : Ref[Tensor(F32)][32, 32, 3, 3]    # net.up_concat03.conv.convs.1.0.weight
+        , %para73 : Ref[Tensor(F32)][32, 160, 3, 3]    # net.up_concat04.conv.convs.0.0.weight
+        , %para74 : Ref[Tensor(F32)][32, 32, 3, 3]    # net.up_concat04.conv.convs.1.0.weight
+        , %para75 : Ref[Tensor(F32)][64, 128, 3, 3]    # net.up_concat11.conv.convs.0.0.weight
+        , %para76 : Ref[Tensor(F32)][64, 64, 3, 3]    # net.up_concat11.conv.convs.1.0.weight
+        , %para77 : Ref[Tensor(F32)][64, 192, 3, 3]    # net.up_concat12.conv.convs.0.0.weight
+        , %para78 : Ref[Tensor(F32)][64, 64, 3, 3]    # net.up_concat12.conv.convs.1.0.weight
+        , %para79 : Ref[Tensor(F32)][64, 256, 3, 3]    # net.up_concat13.conv.convs.0.0.weight
+        , %para80 : Ref[Tensor(F32)][64, 64, 3, 3]    # net.up_concat13.conv.convs.1.0.weight
+        , %para81 : Ref[Tensor(F32)][128, 256, 3, 3]    # net.up_concat21.conv.convs.0.0.weight
+        , %para82 : Ref[Tensor(F32)][128, 128, 3, 3]    # net.up_concat21.conv.convs.1.0.weight
+        , %para83 : Ref[Tensor(F32)][128, 384, 3, 3]    # net.up_concat22.conv.convs.0.0.weight
+        , %para84 : Ref[Tensor(F32)][128, 128, 3, 3]    # net.up_concat22.conv.convs.1.0.weight
+        , %para85 : Ref[Tensor(F32)][256, 512, 3, 3]    # net.up_concat31.conv.convs.0.0.weight
+        , %para86 : Ref[Tensor(F32)][256, 256, 3, 3]    # net.up_concat31.conv.convs.1.0.weight
+    ) {
+
+#------------------------> 0
+    %1 = FuncGraph::fg_107(%para1, %para2)    #(Tensor(F32)[1, 3, 256, 256], Tensor(F32)[1, 2, 256, 256])    # fg_107=construct.107 #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#[CNode]131
+    Primitive::Return{prim_type=1}(%1)    #(Undefined) #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#[CNode]132
+}
+# order:
+#   1: construct_wrapper.90:[CNode]131{[0]: ValueNode<FuncGraph> construct.107, [1]: data, [2]: label}
+#   2: construct_wrapper.90:[CNode]132{[0]: ValueNode<Primitive> Return, [1]: [CNode]131}
+
+
+# [No.2] construct.107
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(634)/    def construct(self, data, label):/
+funcgraph fg_107[fg_90](
+        %para87 : Tensor(F32)[1, 3, 256, 256]    # data
+        , %para88 : Tensor(F32)[1, 2, 256, 256]    # label
+    ) {
+    %1 : Bool = FuncGraph::fg_133(Bool(0))    #(Bool)    # fg_133=bool_.133 #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#134
+    %2 : Func = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_135, FuncGraph::fg_108)    #(Bool, Func, Func)    # fg_135=✓construct.135, fg_108=✗construct.108 #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#[CNode]136
+
+#------------------------> 1
+    %3 = %2() #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#[CNode]137
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#[CNode]138
+}
+# order:
+#   1: construct.107:outputs{[0]: ValueNode<FuncGraph> construct.109, [1]: data}
+#   2: construct.107:134{[0]: ValueNode<FuncGraph> bool_.133, [1]: ValueNode<BoolImm> false}
+#   3: construct.107:[CNode]136{[0]: ValueNode<Primitive> Switch, [1]: 134, [2]: ValueNode<FuncGraph> ✓construct.135, [3]: ValueNode<FuncGraph> ✗construct.108}
+#   4: construct.107:[CNode]137{[0]: [CNode]136}
+#   5: construct.107:[CNode]138{[0]: ValueNode<Primitive> Return, [1]: [CNode]137}
+
+
+# [No.3] ✗construct.108
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/
+funcgraph fg_108[fg_107](
+) {
+
+#------------------------> 2
+    %1 = $(✗construct.108):FuncGraph::fg_109(%para87)    #(Tensor(F32)[1, 3, 256, 256])    # fg_109=construct.109 #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(635)/        outputs = self._network(data)/#outputs
+    %2 = FuncGraph::fg_139(%1, %para88)    #(Undefined, Tensor(F32)[1, 2, 256, 256])    # fg_139=↓construct.139 #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#[CNode]140
+    Primitive::Return{prim_type=1}(%2)    #(Undefined) #scope: Default
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/wrap/cell_wrapper.py(636)/        if self.add_cast_fp32:/#[CNode]141
+}
+# order:
+#   1: ✗construct.108:[CNode]140{[0]: ValueNode<FuncGraph> ↓construct.139, [1]: outputs, [2]: label}
+#   2: ✗construct.108:[CNode]141{[0]: ValueNode<Primitive> Return, [1]: [CNode]140}
+
+
+# [No.4] construct.109
+# In file /home/ma-user/work/unet/src/utils.py(47)/    def construct(self, x)://
+funcgraph fg_109[fg_90](
+        %para89 : Tensor(F32)[1, 3, 256, 256]    # x
+    ) {
+    %1 : Bool = FuncGraph::fg_133(Bool(1))    #(Bool)    # fg_133=bool_.133 #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(49)/        if self.need_slice://#142
+    %2 : Func = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_110, FuncGraph::fg_143)    #(Bool, Func, Func)    # fg_110=✓construct.110, fg_143=✗construct.143 #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(49)/        if self.need_slice://#[CNode]144
+
+#------------------------> 3
+    %3 = %2() #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(49)/        if self.need_slice://#[CNode]145
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(49)/        if self.need_slice://#[CNode]146
+}
+# order:
+#   1: construct.109:out{[0]: ValueNode<FuncGraph> construct.111, [1]: x}
+#   2: construct.109:142{[0]: ValueNode<FuncGraph> bool_.133, [1]: ValueNode<BoolImm> true}
+#   3: construct.109:[CNode]144{[0]: ValueNode<Primitive> Switch, [1]: 142, [2]: ValueNode<FuncGraph> ✓construct.110, [3]: ValueNode<FuncGraph> ✗construct.143}
+#   4: construct.109:[CNode]145{[0]: [CNode]144}
+#   5: construct.109:[CNode]146{[0]: ValueNode<Primitive> Return, [1]: [CNode]145}
+
+
+# [No.5] ✓construct.110
+# In file /home/ma-user/work/unet/src/utils.py(49)/        if self.need_slice://
+funcgraph fg_110[fg_109](
+) {
+
+#------------------------> 4
+    %1 = $(✓construct.110):FuncGraph::fg_111(%para89)    #(Tensor(F32)[1, 3, 256, 256])    # fg_111=construct.111 #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(48)/        out = self.net(x)//#out
+    %2 = DoSignaturePrimitive::S-Prim-negative{prim_type=1}(I64(1))    #(Undefined) #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(50)/            out = self.squeeze(out[-1:])//#[CNode]147
+    %3 = DoSignaturePrimitive::S-Prim-make_slice{prim_type=1}(%2, None, None)    #(Undefined, Undefined, Undefined) #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(0)/#[CNode]148
+    %4 = DoSignaturePrimitive::S-Prim-getitem{prim_type=1}(%1, %3)    #(Undefined, Undefined) #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(50)/            out = self.squeeze(out[-1:])//#[CNode]149
+    %5 = DoSignaturePrimitive::S-Prim-Squeeze{prim_type=1}[axis=(I64(0)), input_names=["x"], output_names=["output"]](%4)    #(Undefined) #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(50)/            out = self.squeeze(out[-1:])//#out
+    %6 = FuncGraph::fg_150(%5)    #(Undefined)    # fg_150=↓construct.150 #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(49)/        if self.need_slice://#[CNode]151
+    Primitive::Return{prim_type=1}(%6)    #(Undefined) #scope: Default/_network-UnetEval
+      # In file /home/ma-user/work/unet/src/utils.py(49)/        if self.need_slice://#[CNode]152
+}
+# order:
+#   1: ✓construct.110:[CNode]147{[0]: ValueNode<DoSignaturePrimitive> S-Prim-negative, [1]: ValueNode<Int64Imm> 1}
+#   2: ✓construct.110:[CNode]148{[0]: ValueNode<DoSignaturePrimitive> S-Prim-make_slice, [1]: [CNode]147, [2]: ValueNode<None> None, [3]: ValueNode<None> None}
+#   3: ✓construct.110:[CNode]149{[0]: ValueNode<DoSignaturePrimitive> S-Prim-getitem, [1]: out, [2]: [CNode]148}
+#   4: ✓construct.110:out{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Squeeze, [1]: [CNode]149}
+#   5: ✓construct.110:[CNode]151{[0]: ValueNode<FuncGraph> ↓construct.150, [1]: out}
+#   6: ✓construct.110:[CNode]152{[0]: ValueNode<Primitive> Return, [1]: [CNode]151}
+
+
+# [No.6] construct.111
+# In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(69)/    def construct(self, inputs):/
+funcgraph fg_111[fg_90](
+        %para90 : Tensor(F32)[1, 3, 256, 256]    # inputs
+    ) {
+    %1 : Bool = FuncGraph::fg_133(Bool(1))    #(Bool)    # fg_133=bool_.133 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(95)/        if self.use_ds:/#153
+    %2 : Func = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_112, FuncGraph::fg_154)    #(Bool, Func, Func)    # fg_112=✓construct.112, fg_154=✗construct.154 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(95)/        if self.use_ds:/#[CNode]155
+
+#------------------------> 5
+    %3 = %2() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(95)/        if self.use_ds:/#[CNode]156
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(95)/        if self.use_ds:/#[CNode]157
+}
+# order:
+#   1: construct.111:[CNode]158{[0]: ValueNode<Primitive> mixed_precision_cast, [1]: ValueNode<Float> Float16, [2]: inputs}
+#   2: construct.111:x00{[0]: ValueNode<FuncGraph> construct.159, [1]: [CNode]158}
+#   3: construct.111:[CNode]160{[0]: ValueNode<FuncGraph> construct.161, [1]: x00}
+#   4: construct.111:x10{[0]: ValueNode<FuncGraph> construct.162, [1]: [CNode]160}
+#   5: construct.111:[CNode]163{[0]: ValueNode<FuncGraph> construct.161, [1]: x10}
+#   6: construct.111:x20{[0]: ValueNode<FuncGraph> construct.164, [1]: [CNode]163}
+#   7: construct.111:[CNode]165{[0]: ValueNode<FuncGraph> construct.161, [1]: x20}
+#   8: construct.111:x30{[0]: ValueNode<FuncGraph> construct.166, [1]: [CNode]165}
+#   9: construct.111:[CNode]167{[0]: ValueNode<FuncGraph> construct.161, [1]: x30}
+#  10: construct.111:x40{[0]: ValueNode<FuncGraph> construct.168, [1]: [CNode]167}
+#  11: construct.111:x01{[0]: ValueNode<FuncGraph> construct.169, [1]: x10, [2]: x00}
+#  12: construct.111:x11{[0]: ValueNode<FuncGraph> construct.170, [1]: x20, [2]: x10}
+#  13: construct.111:x21{[0]: ValueNode<FuncGraph> construct.171, [1]: x30, [2]: x20}
+#  14: construct.111:x31{[0]: ValueNode<FuncGraph> construct.172, [1]: x40, [2]: x30}
+#  15: construct.111:x02{[0]: ValueNode<FuncGraph> construct.173, [1]: x11, [2]: x00, [3]: x01}
+#  16: construct.111:x12{[0]: ValueNode<FuncGraph> construct.174, [1]: x21, [2]: x10, [3]: x11}
+#  17: construct.111:x22{[0]: ValueNode<FuncGraph> construct.175, [1]: x31, [2]: x20, [3]: x21}
+#  18: construct.111:x03{[0]: ValueNode<FuncGraph> construct.176, [1]: x12, [2]: x00, [3]: x01, [4]: x02}
+#  19: construct.111:x13{[0]: ValueNode<FuncGraph> construct.177, [1]: x22, [2]: x10, [3]: x11, [4]: x12}
+#  20: construct.111:x04{[0]: ValueNode<FuncGraph> construct.178, [1]: x13, [2]: x00, [3]: x01, [4]: x02, [5]: x03}
+#  21: construct.111:final1{[0]: ValueNode<FuncGraph> construct.179, [1]: x01}
+#  22: construct.111:final2{[0]: ValueNode<FuncGraph> construct.180, [1]: x02}
+#  23: construct.111:final3{[0]: ValueNode<FuncGraph> construct.181, [1]: x03}
+#  24: construct.111:final4{[0]: ValueNode<FuncGraph> construct.182, [1]: x04}
+#  25: construct.111:153{[0]: ValueNode<FuncGraph> bool_.133, [1]: ValueNode<BoolImm> true}
+#  26: construct.111:[CNode]155{[0]: ValueNode<Primitive> Switch, [1]: 153, [2]: ValueNode<FuncGraph> ✓construct.112, [3]: ValueNode<FuncGraph> ✗construct.154}
+#  27: construct.111:[CNode]156{[0]: [CNode]155}
+#  28: construct.111:[CNode]157{[0]: ValueNode<Primitive> Return, [1]: [CNode]156}
+
+
+# [No.7] ✓construct.112
+# In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(95)/        if self.use_ds:/
+funcgraph fg_112[fg_111](
+) {
+    %1 : $(✓construct.112):Tensor(F16)[1, 3, 256, 256] = Primitive::mixed_precision_cast{prim_type=1}(F16, %para90)    #(TypeType, Tensor(F32)[1, 3, 256, 256]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(69)/    def construct(self, inputs):/#[CNode]158
+    %2 : $(✓construct.112):Tensor(F16)[1, 32, 256, 256] = FuncGraph::fg_159(%1)    #(Tensor(F16)[1, 3, 256, 256])    # fg_159=construct.159 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(70)/        x00 = self.conv00(inputs)                   # channel = filters[0]/#x00
+    %3 : $(✓construct.112):Tensor(F16)[1, 32, 128, 128] = FuncGraph::fg_161(%2)    #(Tensor(F16)[1, 32, 256, 256])    # fg_161=construct.161 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(71)/        x10 = self.conv10(self.maxpool(x00))        # channel = filters[1]/#[CNode]160
+    %4 : $(✓construct.112):Tensor(F16)[1, 64, 128, 128] = FuncGraph::fg_162(%3)    #(Tensor(F16)[1, 32, 128, 128])    # fg_162=construct.162 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(71)/        x10 = self.conv10(self.maxpool(x00))        # channel = filters[1]/#x10
+    %5 : $(✓construct.112):Tensor(F16)[1, 32, 256, 256] = FuncGraph::fg_169(%4, %2)    #(Tensor(F16)[1, 64, 128, 128], Tensor(F16)[1, 32, 256, 256])    # fg_169=construct.169 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(76)/        x01 = self.up_concat01(x10, x00)            # channel = filters[0]/#x01
+    %6 : $(✓construct.112):Tensor(F16)[1, 2, 256, 256] = FuncGraph::fg_179(%5)    #(Tensor(F16)[1, 32, 256, 256])    # fg_179=construct.179 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(90)/        final1 = self.final1(x01)/#final1
+    %7 : $(✓construct.112):Tensor(F16)[1, 64, 64, 64] = FuncGraph::fg_161(%4)    #(Tensor(F16)[1, 64, 128, 128])    # fg_161=construct.161 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(72)/        x20 = self.conv20(self.maxpool(x10))        # channel = filters[2]/#[CNode]163
+    %8 : $(✓construct.112):Tensor(F16)[1, 128, 64, 64] = FuncGraph::fg_164(%7)    #(Tensor(F16)[1, 64, 64, 64])    # fg_164=construct.164 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(72)/        x20 = self.conv20(self.maxpool(x10))        # channel = filters[2]/#x20
+    %9 : $(✓construct.112):Tensor(F16)[1, 64, 128, 128] = FuncGraph::fg_170(%8, %4)    #(Tensor(F16)[1, 128, 64, 64], Tensor(F16)[1, 64, 128, 128])    # fg_170=construct.170 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(77)/        x11 = self.up_concat11(x20, x10)            # channel = filters[1]/#x11
+    %10 : $(✓construct.112):Tensor(F16)[1, 32, 256, 256] = FuncGraph::fg_173(%9, %2, %5)    #(Tensor(F16)[1, 64, 128, 128], Tensor(F16)[1, 32, 256, 256], Tensor(F16)[1, 32, 256, 256])    # fg_173=construct.173 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(81)/        x02 = self.up_concat02(x11, x00, x01)       # channel = filters[0]/#x02
+    %11 : $(✓construct.112):Tensor(F16)[1, 2, 256, 256] = FuncGraph::fg_180(%10)    #(Tensor(F16)[1, 32, 256, 256])    # fg_180=construct.180 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(91)/        final2 = self.final2(x02)/#final2
+    %12 : $(✓construct.112):Tensor(F16)[1, 128, 32, 32] = FuncGraph::fg_161(%8)    #(Tensor(F16)[1, 128, 64, 64])    # fg_161=construct.161 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(73)/        x30 = self.conv30(self.maxpool(x20))        # channel = filters[3]/#[CNode]165
+    %13 : $(✓construct.112):Tensor(F16)[1, 256, 32, 32] = FuncGraph::fg_166(%12)    #(Tensor(F16)[1, 128, 32, 32])    # fg_166=construct.166 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(73)/        x30 = self.conv30(self.maxpool(x20))        # channel = filters[3]/#x30
+    %14 : $(✓construct.112):Tensor(F16)[1, 128, 64, 64] = FuncGraph::fg_171(%13, %8)    #(Tensor(F16)[1, 256, 32, 32], Tensor(F16)[1, 128, 64, 64])    # fg_171=construct.171 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(78)/        x21 = self.up_concat21(x30, x20)            # channel = filters[2]/#x21
+    %15 : $(✓construct.112):Tensor(F16)[1, 64, 128, 128] = FuncGraph::fg_174(%14, %4, %9)    #(Tensor(F16)[1, 128, 64, 64], Tensor(F16)[1, 64, 128, 128], Tensor(F16)[1, 64, 128, 128])    # fg_174=construct.174 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(82)/        x12 = self.up_concat12(x21, x10, x11)       # channel = filters[1]/#x12
+    %16 : $(✓construct.112):Tensor(F16)[1, 32, 256, 256] = FuncGraph::fg_176(%15, %2, %5, %10)    #(Tensor(F16)[1, 64, 128, 128], Tensor(F16)[1, 32, 256, 256], Tensor(F16)[1, 32, 256, 256], Tensor(F16)[1, 32, 256, 256])    # fg_176=construct.176 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(85)/        x03 = self.up_concat03(x12, x00, x01, x02)  # channel = filters[0]/#x03
+    %17 : $(✓construct.112):Tensor(F16)[1, 2, 256, 256] = FuncGraph::fg_181(%16)    #(Tensor(F16)[1, 32, 256, 256])    # fg_181=construct.181 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(92)/        final3 = self.final3(x03)/#final3
+    %18 : $(✓construct.112):Tensor(F16)[1, 256, 16, 16] = FuncGraph::fg_161(%13)    #(Tensor(F16)[1, 256, 32, 32])    # fg_161=construct.161 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(74)/        x40 = self.conv40(self.maxpool(x30))        # channel = filters[4]/#[CNode]167
+    %19 : $(✓construct.112):Tensor(F16)[1, 512, 16, 16] = FuncGraph::fg_168(%18)    #(Tensor(F16)[1, 256, 16, 16])    # fg_168=construct.168 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(74)/        x40 = self.conv40(self.maxpool(x30))        # channel = filters[4]/#x40
+
+#------------------------> 6
+    %20 = $(✓construct.112):FuncGraph::fg_172(%19, %13)    #(Tensor(F16)[1, 512, 16, 16], Tensor(F16)[1, 256, 32, 32])    # fg_172=construct.172 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(79)/        x31 = self.up_concat31(x40, x30)            # channel = filters[3]/#x31
+    %21 = $(✓construct.112):FuncGraph::fg_175(%20, %8, %14)    #(Undefined, Tensor(F16)[1, 128, 64, 64], Tensor(F16)[1, 128, 64, 64])    # fg_175=construct.175 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(83)/        x22 = self.up_concat22(x31, x20, x21)       # channel = filters[2]/#x22
+    %22 = $(✓construct.112):FuncGraph::fg_177(%21, %4, %9, %15)    #(Undefined, Tensor(F16)[1, 64, 128, 128], Tensor(F16)[1, 64, 128, 128], Tensor(F16)[1, 64, 128, 128])    # fg_177=construct.177 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(86)/        x13 = self.up_concat13(x22, x10, x11, x12)  # channel = filters[1]/#x13
+    %23 = $(✓construct.112):FuncGraph::fg_178(%22, %2, %5, %10, %16)    #(Undefined, Tensor(F16)[1, 32, 256, 256], Tensor(F16)[1, 32, 256, 256], Tensor(F16)[1, 32, 256, 256], Tensor(F16)[1, 32, 256, 256])    # fg_178=construct.178 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(88)/        x04 = self.up_concat04(x13, x00, x01, x02, x03) # channel = filters[0]/#x04
+    %24 = $(✓construct.112):FuncGraph::fg_182(%23)    #(Undefined)    # fg_182=construct.182 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(93)/        final4 = self.final4(x04)/#final4
+    %25 = DoSignaturePrimitive::S-Prim-MakeTuple{prim_type=1}(%6, %11, %17, %24)    #(Tensor(F16)[1, 2, 256, 256], Tensor(F16)[1, 2, 256, 256], Tensor(F16)[1, 2, 256, 256], Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(96)/            final = self.stack((final1, final2, final3, final4))/#[CNode]183
+    %26 = DoSignaturePrimitive::S-Prim-Stack{prim_type=1}[num=I64(4), axis=I64(0)](%25)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(96)/            final = self.stack((final1, final2, final3, final4))/#final
+    Primitive::Return{prim_type=1}(%26)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_model.py(97)/            return final/#[CNode]184
+}
+# order:
+#   1: ✓construct.112:[CNode]183{[0]: ValueNode<DoSignaturePrimitive> S-Prim-MakeTuple, [1]: final1, [2]: final2, [3]: final3, [4]: final4}
+#   2: ✓construct.112:final{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Stack, [1]: [CNode]183}
+#   3: ✓construct.112:[CNode]184{[0]: ValueNode<Primitive> Return, [1]: final}
+
+
+# [No.8] construct.113
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(72)/    def construct(self, high_feature, *low_feature):/
+funcgraph fg_113[fg_90](
+        %para91 : Tensor(F16)[1, 512, 16, 16]    # high_feature
+        , %para92 : Tensor(F16)[1, 256, 32, 32]    # low_feature0
+    ) {
+    %1 : Bool = FuncGraph::fg_185(Bool(1))    #(Bool)    # fg_185=bool_.185 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/#186
+    %2 : Func = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_114, FuncGraph::fg_187)    #(Bool, Func, Func)    # fg_114=✓construct.114, fg_187=✗construct.187 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/#[CNode]188
+
+#------------------------> 7
+    %3 = %2() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/#[CNode]189
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/#[CNode]190
+}
+# order:
+#   1: construct.113:[CNode]191{[0]: ValueNode<PrimitivePy> Cast, [1]: [CNode]192, [2]: ValueNode<Float> Float16}
+#   2: construct.113:Φlow_feature{[0]: ValueNode<Primitive> mixed_precision_cast, [1]: ValueNode<Float> Float16, [2]: [CNode]193}
+#   3: construct.113:[CNode]194{[0]: ValueNode<Primitive> mixed_precision_cast, [1]: ValueNode<Float> Float16, [2]: high_feature}
+#   4: construct.113:186{[0]: ValueNode<FuncGraph> bool_.185, [1]: ValueNode<BoolImm> true}
+#   5: construct.113:[CNode]188{[0]: ValueNode<Primitive> Switch, [1]: 186, [2]: ValueNode<FuncGraph> ✓construct.114, [3]: ValueNode<FuncGraph> ✗construct.187}
+#   6: construct.113:[CNode]189{[0]: [CNode]188}
+#   7: construct.113:[CNode]190{[0]: ValueNode<Primitive> Return, [1]: [CNode]189}
+
+
+# [No.9] ✓construct.114
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/
+funcgraph fg_114[fg_113](
+) {
+    %1 : $(✓construct.114):Tensor(F16)[1, 512, 16, 16] = Primitive::mixed_precision_cast{prim_type=1}(F16, %para91)    #(TypeType, Tensor(F16)[1, 512, 16, 16]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(72)/    def construct(self, high_feature, *low_feature):/#[CNode]194
+    %2 : Tensor(F16)[1, 256, 32, 32] = FuncGraph::fg_195(%1)    #(Tensor(F16)[1, 512, 16, 16])    # fg_195=construct.195 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(74)/            output = self.up_conv(high_feature)/#output
+
+#------------------------> 8
+    %3 = FuncGraph::fg_115(%2)    #(Tensor(F16)[1, 256, 32, 32])    # fg_115=↓construct.115 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/#[CNode]196
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/#[CNode]197
+}
+# order:
+#   1: ✓construct.114:output{[0]: ValueNode<FuncGraph> construct.195, [1]: [CNode]194}
+#   2: ✓construct.114:[CNode]196{[0]: ValueNode<FuncGraph> ↓construct.115, [1]: output}
+#   3: ✓construct.114:[CNode]197{[0]: ValueNode<Primitive> Return, [1]: [CNode]196}
+
+
+# [No.10] ↓construct.115
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(73)/        if self.use_deconv:/
+funcgraph fg_115[fg_113](
+        %para93 : Tensor(F16)[1, 256, 32, 32]    # Φoutput
+    ) {
+    %1 : $(↓construct.115):Tuple[Tensor(F16)] = Primitive::MakeTuple{prim_type=1}(%para92)    #(Tensor(F16)[1, 256, 32, 32]) #scope: Default
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(72)/    def construct(self, high_feature, *low_feature):/#[CNode]193
+    %2 : $(↓construct.115):Tuple[Tensor(F16)] = Primitive::mixed_precision_cast{prim_type=1}(F16, %1)    #(TypeType, Tuple[Tensor(F16)]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#Φlow_feature
+    %3 : I64 = FuncGraph::fg_198(%2)    #(Tuple[Tensor(F16)])    # fg_198=ms_len.198 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]199
+    %4 : Bool = Primitive::scalar_lt{prim_type=1}(%3, I64(9223372036854775807))    #(I64, I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]200
+    %5 : Func = Primitive::Switch{prim_type=1}(%4, FuncGraph::fg_116, FuncGraph::fg_201)    #(Bool, Func, Func)    # fg_116=✓↓construct.116, fg_201=✗↓construct.201 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]202
+
+#------------------------> 9
+    %6 = %5() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]203
+    Primitive::Return{prim_type=1}(%6)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]204
+}
+# order:
+#   1: ↓construct.115:[CNode]199{[0]: ValueNode<FuncGraph> ms_len.198, [1]: Φlow_feature}
+#   2: ↓construct.115:[CNode]200{[0]: ValueNode<Primitive> scalar_lt, [1]: [CNode]199, [2]: ValueNode<Int64Imm> 9223372036854775807}
+#   3: ↓construct.115:[CNode]202{[0]: ValueNode<Primitive> Switch, [1]: [CNode]200, [2]: ValueNode<FuncGraph> ✓↓construct.116, [3]: ValueNode<FuncGraph> ✗↓construct.201}
+#   4: ↓construct.115:[CNode]203{[0]: [CNode]202}
+#   5: ↓construct.115:[CNode]204{[0]: ValueNode<Primitive> Return, [1]: [CNode]203}
+
+
+# [No.11] ✓↓construct.116
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/
+funcgraph fg_116[fg_115](
+) {
+    %1 : $(✓↓construct.116):Tuple[Tensor(F16)] = Primitive::MakeTuple{prim_type=1}(%para92)    #(Tensor(F16)[1, 256, 32, 32]) #scope: Default
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(72)/    def construct(self, high_feature, *low_feature):/#[CNode]193
+    %2 : $(✓↓construct.116):Tuple[Tensor(F16)] = Primitive::mixed_precision_cast{prim_type=1}(F16, %1)    #(TypeType, Tuple[Tensor(F16)]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#Φlow_feature
+    %3 : Tuple[Tensor(F16)] = FuncGraph::fg_205(%2)    #(Tuple[Tensor(F16)])    # fg_205=ms_iter.205 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#@feature
+
+#------------------------> 10
+    %4 = FuncGraph::fg_117(%3, %para93)    #(Tuple[Tensor(F16)], Tensor(F16)[1, 256, 32, 32])    # fg_117=⤾✓↓construct.117 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]206
+    Primitive::Return{prim_type=1}(%4)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]207
+}
+# order:
+#   1: ✓↓construct.116:@feature{[0]: ValueNode<FuncGraph> ms_iter.205, [1]: Φlow_feature}
+#   2: ✓↓construct.116:[CNode]206{[0]: ValueNode<FuncGraph> ⤾✓↓construct.117, [1]: @feature, [2]: Φoutput}
+#   3: ✓↓construct.116:[CNode]207{[0]: ValueNode<Primitive> Return, [1]: [CNode]206}
+
+
+# [No.12] ⤾✓↓construct.117
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/
+funcgraph fg_117[fg_90](
+        %para94 : Tuple[Tensor(F16)]    # @feature
+        , %para95 : Tensor(F16)[1, 256, 32, 32]    # Φoutput
+    ) {
+    %1 : Bool = FuncGraph::fg_129(%para94)    #(Tuple[Tensor(F16)])    # fg_129=hasnext.129 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]208
+    %2 : Func = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_118, FuncGraph::fg_119)    #(Bool, Func, Func)    # fg_118=⥁✓↓construct.118, fg_119=↓✓↓construct.119 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]209
+
+#------------------------> 13
+    %3 = %2() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]210
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]211
+}
+# order:
+#   1: ⤾✓↓construct.117:[CNode]208{[0]: ValueNode<FuncGraph> hasnext.129, [1]: @feature}
+#   2: ⤾✓↓construct.117:[CNode]209{[0]: ValueNode<Primitive> Switch, [1]: [CNode]208, [2]: ValueNode<FuncGraph> ⥁✓↓construct.118, [3]: ValueNode<FuncGraph> ↓✓↓construct.119}
+#   3: ⤾✓↓construct.117:[CNode]210{[0]: [CNode]209}
+#   4: ⤾✓↓construct.117:[CNode]211{[0]: ValueNode<Primitive> Return, [1]: [CNode]210}
+
+
+# [No.13] ⥁✓↓construct.118
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/
+funcgraph fg_118[fg_117](
+) {
+    %1 : Tuple[Tensor(F16),Tuple[]] = FuncGraph::fg_212(%para94)    #(Tuple[Tensor(F16)])    # fg_212=ms_next.212 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]213
+    %2 : Tuple[] = DoSignaturePrimitive::S-Prim-getitem{prim_type=1}(%1, I64(1))    #(Tuple[Tensor(F16),Tuple[]], I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#@feature
+    %3 : Tensor(F16)[1, 256, 32, 32] = DoSignaturePrimitive::S-Prim-getitem{prim_type=1}(%1, I64(0))    #(Tuple[Tensor(F16),Tuple[]], I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#feature
+    %4 : Tuple[Tensor(F16)*2] = DoSignaturePrimitive::S-Prim-MakeTuple{prim_type=1}(%para95, %3)    #(Tensor(F16)[1, 256, 32, 32], Tensor(F16)[1, 256, 32, 32]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(80)/            output = self.concat((output, feature))/#[CNode]214
+    %5 : Tensor(F16)[1, 512, 32, 32] = DoSignaturePrimitive::S-Prim-Concat{prim_type=1}[inputNums=I64(2), axis=I64(1)](%4)    #(Tuple[Tensor(F16)*2]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(80)/            output = self.concat((output, feature))/#output
+
+#------------------------> 12
+    %6 = FuncGraph::fg_117(%2, %5)    #(Tuple[], Tensor(F16)[1, 512, 32, 32])    # fg_117=⤾✓↓construct.117 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]215
+    Primitive::Return{prim_type=1}(%6)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]216
+}
+# order:
+#   1: ⥁✓↓construct.118:[CNode]213{[0]: ValueNode<FuncGraph> ms_next.212, [1]: @feature}
+#   2: ⥁✓↓construct.118:feature{[0]: ValueNode<DoSignaturePrimitive> S-Prim-getitem, [1]: [CNode]213, [2]: ValueNode<Int64Imm> 0}
+#   3: ⥁✓↓construct.118:@feature{[0]: ValueNode<DoSignaturePrimitive> S-Prim-getitem, [1]: [CNode]213, [2]: ValueNode<Int64Imm> 1}
+#   4: ⥁✓↓construct.118:[CNode]214{[0]: ValueNode<DoSignaturePrimitive> S-Prim-MakeTuple, [1]: Φoutput, [2]: feature}
+#   5: ⥁✓↓construct.118:output{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Concat, [1]: [CNode]214}
+#   6: ⥁✓↓construct.118:[CNode]215{[0]: ValueNode<FuncGraph> ⤾✓↓construct.117, [1]: @feature, [2]: output}
+#   7: ⥁✓↓construct.118:[CNode]216{[0]: ValueNode<Primitive> Return, [1]: [CNode]215}
+
+
+# [No.14] ↓✓↓construct.119
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/
+funcgraph fg_119[fg_117](
+) {
+
+#------------------------> 14
+    %1 = FuncGraph::fg_120(%para95)    #(Tensor(F16)[1, 512, 32, 32])    # fg_120=↓↓construct.120 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]217
+    Primitive::Return{prim_type=1}(%1)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/#[CNode]218
+}
+# order:
+#   1: ↓✓↓construct.119:[CNode]217{[0]: ValueNode<FuncGraph> ↓↓construct.120, [1]: Φoutput}
+#   2: ↓✓↓construct.119:[CNode]218{[0]: ValueNode<Primitive> Return, [1]: [CNode]217}
+
+
+# [No.15] ↓↓construct.120
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(79)/        for feature in low_feature:/
+funcgraph fg_120[fg_90](
+        %para96 : Tensor(F16)[1, 512, 32, 32]    # Φoutput
+    ) {
+
+#------------------------> 15
+    %1 = FuncGraph::fg_121(%para96)    #(Tensor(F16)[1, 512, 32, 32])    # fg_121=construct.121 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(81)/        return self.conv(output)/#[CNode]219
+    Primitive::Return{prim_type=1}(%1)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(81)/        return self.conv(output)/#[CNode]220
+}
+# order:
+#   1: ↓↓construct.120:[CNode]219{[0]: ValueNode<FuncGraph> construct.121, [1]: Φoutput}
+#   2: ↓↓construct.120:[CNode]220{[0]: ValueNode<Primitive> Return, [1]: [CNode]219}
+
+
+# [No.16] construct.121
+# In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(53)/    def construct(self, inputs):/
+funcgraph fg_121[fg_90](
+        %para97 : Tensor(F16)[1, 512, 32, 32]    # inputs
+    ) {
+    %1 : Tensor(F16)[1, 512, 32, 32] = Primitive::mixed_precision_cast{prim_type=1}(F16, %para97)    #(TypeType, Tensor(F16)[1, 512, 32, 32]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(53)/    def construct(self, inputs):/#[CNode]221
+
+#------------------------> 16
+    %2 = FuncGraph::fg_122(%1)    #(Tensor(F16)[1, 512, 32, 32])    # fg_122=construct.122 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(54)/        x = self.convs(inputs)/#x
+    Primitive::Return{prim_type=1}(%2)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d
+      # In file /home/ma-user/work/unet/src/unet_nested/unet_parts.py(55)/        return x/#[CNode]222
+}
+# order:
+#   1: construct.121:[CNode]221{[0]: ValueNode<Primitive> mixed_precision_cast, [1]: ValueNode<Float> Float16, [2]: inputs}
+#   2: construct.121:x{[0]: ValueNode<FuncGraph> construct.122, [1]: [CNode]221}
+#   3: construct.121:[CNode]222{[0]: ValueNode<Primitive> Return, [1]: x}
+
+
+# [No.17] construct.122
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(235)/    def construct(self, input_data):/
+funcgraph fg_122[fg_90](
+        %para98 : Tensor(F16)[1, 512, 32, 32]    # input_data
+    ) {
+    %1 : Tuple[Func*2] = Primitive::MakeTuple{prim_type=1}(FuncGraph::fg_223, FuncGraph::fg_126)    #(Func, Func)    # fg_223=construct.223, fg_126=construct.126 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]224
+    %2 : I64 = FuncGraph::fg_198(%1)    #(Tuple[Func*2])    # fg_198=ms_len.198 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]225
+    %3 : Bool = Primitive::scalar_lt{prim_type=1}(%2, I64(9223372036854775807))    #(I64, I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]226
+    %4 : Func = Primitive::Switch{prim_type=1}(%3, FuncGraph::fg_123, FuncGraph::fg_227)    #(Bool, Func, Func)    # fg_123=✓construct.123, fg_227=✗construct.227 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]228
+
+#------------------------> 17
+    %5 = %4() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]229
+    Primitive::Return{prim_type=1}(%5)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]230
+}
+# order:
+#   1: construct.122:[CNode]231{[0]: ValueNode<Primitive> mixed_precision_cast, [1]: ValueNode<Float> Float16, [2]: input_data}
+#   2: construct.122:[CNode]225{[0]: ValueNode<FuncGraph> ms_len.198, [1]: [CNode]224}
+#   3: construct.122:[CNode]226{[0]: ValueNode<Primitive> scalar_lt, [1]: [CNode]225, [2]: ValueNode<Int64Imm> 9223372036854775807}
+#   4: construct.122:[CNode]228{[0]: ValueNode<Primitive> Switch, [1]: [CNode]226, [2]: ValueNode<FuncGraph> ✓construct.123, [3]: ValueNode<FuncGraph> ✗construct.227}
+#   5: construct.122:[CNode]229{[0]: [CNode]228}
+#   6: construct.122:[CNode]230{[0]: ValueNode<Primitive> Return, [1]: [CNode]229}
+
+
+# [No.18] ✓construct.123
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/
+funcgraph fg_123[fg_122](
+) {
+    %1 : $(✓construct.123):Tuple[Func*2] = Primitive::MakeTuple{prim_type=1}(FuncGraph::fg_223, FuncGraph::fg_126)    #(Func, Func)    # fg_223=construct.223, fg_126=construct.126 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]224
+    %2 : Tuple[Func*2] = FuncGraph::fg_205(%1)    #(Tuple[Func*2])    # fg_205=ms_iter.205 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#@cell
+    %3 : $(✓construct.123):Tensor(F16)[1, 512, 32, 32] = Primitive::mixed_precision_cast{prim_type=1}(F16, %para98)    #(TypeType, Tensor(F16)[1, 512, 32, 32]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(235)/    def construct(self, input_data):/#[CNode]231
+
+#------------------------> 18
+    %4 = FuncGraph::fg_124(%2, %3)    #(Tuple[Func*2], Tensor(F16)[1, 512, 32, 32])    # fg_124=⤾✓construct.124 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]232
+    Primitive::Return{prim_type=1}(%4)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]233
+}
+# order:
+#   1: ✓construct.123:@cell{[0]: ValueNode<FuncGraph> ms_iter.205, [1]: [CNode]224}
+#   2: ✓construct.123:[CNode]232{[0]: ValueNode<FuncGraph> ⤾✓construct.124, [1]: @cell, [2]: [CNode]231}
+#   3: ✓construct.123:[CNode]233{[0]: ValueNode<Primitive> Return, [1]: [CNode]232}
+
+
+# [No.19] ⤾✓construct.124
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/
+funcgraph fg_124(
+        %para99 : Tuple[Func*2]    # @cell
+        , %para100 : Tensor(F16)[1, 512, 32, 32]    # Φinput_data
+    ) {
+    %1 : Bool = FuncGraph::fg_129(%para99)    #(Tuple[Func*2])    # fg_129=hasnext.129 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]234
+    %2 : Func = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_125, FuncGraph::fg_235)    #(Bool, Func, Func)    # fg_125=⥁✓construct.125, fg_235=↓✓construct.235 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]236
+
+#------------------------> 21
+    %3 = %2() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]237
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]238
+}
+# order:
+#   1: ⤾✓construct.124:[CNode]234{[0]: ValueNode<FuncGraph> hasnext.129, [1]: @cell}
+#   2: ⤾✓construct.124:[CNode]236{[0]: ValueNode<Primitive> Switch, [1]: [CNode]234, [2]: ValueNode<FuncGraph> ⥁✓construct.125, [3]: ValueNode<FuncGraph> ↓✓construct.235}
+#   3: ⤾✓construct.124:[CNode]237{[0]: [CNode]236}
+#   4: ⤾✓construct.124:[CNode]238{[0]: ValueNode<Primitive> Return, [1]: [CNode]237}
+
+
+# [No.20] ⥁✓construct.125
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/
+funcgraph fg_125[fg_124](
+) {
+    %1 : Tuple[Func,Tuple[Func]] = FuncGraph::fg_212(%para99)    #(Tuple[Func*2])    # fg_212=ms_next.212 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]239
+    %2 : Tuple[Func] = DoSignaturePrimitive::S-Prim-getitem{prim_type=1}(%1, I64(1))    #(Tuple[Func,Tuple[Func]], I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#@cell
+    %3 : Func = DoSignaturePrimitive::S-Prim-getitem{prim_type=1}(%1, I64(0))    #(Tuple[Func,Tuple[Func]], I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#cell
+
+#------------------------> 22
+    %4 : Tensor(F16)[1, 256, 32, 32] = %3(%para100)    #(Tensor(F16)[1, 512, 32, 32]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(237)/            input_data = cell(input_data)/#input_data
+
+#------------------------> 20
+    %5 = FuncGraph::fg_124(%2, %4)    #(Tuple[Func], Tensor(F16)[1, 256, 32, 32])    # fg_124=⤾✓construct.124 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]240
+    Primitive::Return{prim_type=1}(%5)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]241
+}
+# order:
+#   1: ⥁✓construct.125:[CNode]239{[0]: ValueNode<FuncGraph> ms_next.212, [1]: @cell}
+#   2: ⥁✓construct.125:cell{[0]: ValueNode<DoSignaturePrimitive> S-Prim-getitem, [1]: [CNode]239, [2]: ValueNode<Int64Imm> 0}
+#   3: ⥁✓construct.125:@cell{[0]: ValueNode<DoSignaturePrimitive> S-Prim-getitem, [1]: [CNode]239, [2]: ValueNode<Int64Imm> 1}
+#   4: ⥁✓construct.125:input_data{[0]: cell, [1]: Φinput_data}
+#   5: ⥁✓construct.125:[CNode]240{[0]: ValueNode<FuncGraph> ⤾✓construct.124, [1]: @cell, [2]: input_data}
+#   6: ⥁✓construct.125:[CNode]241{[0]: ValueNode<Primitive> Return, [1]: [CNode]240}
+
+
+# [No.21] construct.126
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(235)/    def construct(self, input_data):/
+funcgraph fg_126[fg_90](
+        %para101 : Tensor(F16)[1, 256, 32, 32]    # input_data
+    ) {
+    %1 : Tuple[Func*2] = Primitive::MakeTuple{prim_type=1}(FuncGraph::fg_242, FuncGraph::fg_243)    #(Func, Func)    # fg_242=construct.242, fg_243=construct.243 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]244
+    %2 : I64 = FuncGraph::fg_198(%1)    #(Tuple[Func*2])    # fg_198=ms_len.198 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]245
+    %3 : Bool = Primitive::scalar_lt{prim_type=1}(%2, I64(9223372036854775807))    #(I64, I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]246
+    %4 : Func = Primitive::Switch{prim_type=1}(%3, FuncGraph::fg_127, FuncGraph::fg_247)    #(Bool, Func, Func)    # fg_127=✓construct.127, fg_247=✗construct.247 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]248
+
+#------------------------> 23
+    %5 = %4() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]249
+    Primitive::Return{prim_type=1}(%5)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]250
+}
+# order:
+#   1: construct.126:[CNode]251{[0]: ValueNode<Primitive> mixed_precision_cast, [1]: ValueNode<Float> Float16, [2]: input_data}
+#   2: construct.126:[CNode]245{[0]: ValueNode<FuncGraph> ms_len.198, [1]: [CNode]244}
+#   3: construct.126:[CNode]246{[0]: ValueNode<Primitive> scalar_lt, [1]: [CNode]245, [2]: ValueNode<Int64Imm> 9223372036854775807}
+#   4: construct.126:[CNode]248{[0]: ValueNode<Primitive> Switch, [1]: [CNode]246, [2]: ValueNode<FuncGraph> ✓construct.127, [3]: ValueNode<FuncGraph> ✗construct.247}
+#   5: construct.126:[CNode]249{[0]: [CNode]248}
+#   6: construct.126:[CNode]250{[0]: ValueNode<Primitive> Return, [1]: [CNode]249}
+
+
+# [No.22] ✓construct.127
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/
+funcgraph fg_127[fg_126](
+) {
+    %1 : $(✓construct.127):Tuple[Func*2] = Primitive::MakeTuple{prim_type=1}(FuncGraph::fg_242, FuncGraph::fg_243)    #(Func, Func)    # fg_242=construct.242, fg_243=construct.243 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]244
+    %2 : Tuple[Func*2] = FuncGraph::fg_205(%1)    #(Tuple[Func*2])    # fg_205=ms_iter.205 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#@cell
+    %3 : $(✓construct.127):Tensor(F16)[1, 256, 32, 32] = Primitive::mixed_precision_cast{prim_type=1}(F16, %para101)    #(TypeType, Tensor(F16)[1, 256, 32, 32]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(235)/    def construct(self, input_data):/#[CNode]251
+
+#------------------------> 24
+    %4 = FuncGraph::fg_128(%2, %3)    #(Tuple[Func*2], Tensor(F16)[1, 256, 32, 32])    # fg_128=⤾✓construct.128 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]252
+    Primitive::Return{prim_type=1}(%4)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]253
+}
+# order:
+#   1: ✓construct.127:@cell{[0]: ValueNode<FuncGraph> ms_iter.205, [1]: [CNode]244}
+#   2: ✓construct.127:[CNode]252{[0]: ValueNode<FuncGraph> ⤾✓construct.128, [1]: @cell, [2]: [CNode]251}
+#   3: ✓construct.127:[CNode]253{[0]: ValueNode<Primitive> Return, [1]: [CNode]252}
+
+
+# [No.23] ⤾✓construct.128
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/
+funcgraph fg_128(
+        %para102 : Tuple[Func*2]    # @cell
+        , %para103 : Tensor(F16)[1, 256, 32, 32]    # Φinput_data
+    ) {
+
+#------------------------> 25
+    %1 = FuncGraph::fg_129(%para102)    #(Tuple[Func*2])    # fg_129=hasnext.129 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]254
+    %2 = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_255, FuncGraph::fg_256)    #(Undefined, Undefined, Undefined)    # fg_255=⥁✓construct.255, fg_256=↓✓construct.256 #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]257
+    %3 = %2() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]258
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/up_concat31-UnetUp/conv-UnetConv2d/convs-SequentialCell/1-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/nn/layer/container.py(236)/        for cell in self.cell_list:/#[CNode]259
+}
+# order:
+#   1: ⤾✓construct.128:[CNode]254{[0]: ValueNode<FuncGraph> hasnext.129, [1]: @cell}
+#   2: ⤾✓construct.128:[CNode]257{[0]: ValueNode<Primitive> Switch, [1]: [CNode]254, [2]: ValueNode<FuncGraph> ⥁✓construct.255, [3]: ValueNode<FuncGraph> ↓✓construct.256}
+#   3: ⤾✓construct.128:[CNode]258{[0]: [CNode]257}
+#   4: ⤾✓construct.128:[CNode]259{[0]: ValueNode<Primitive> Return, [1]: [CNode]258}
+
+
+# [No.24] hasnext.129
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1433)/def hasnext(it):/
+funcgraph fg_129(
+        %para104 : Tuple[Func*2]    # it
+    ) {
+    %1 : Func = Primitive::getattr{prim_type=1}(%para104, "__ms_hasnext__")    #(Tuple[Func*2], String) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1435)/    return it.__ms_hasnext__()/#[CNode]260
+
+#------------------------> 26
+    %2 = %1() #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1435)/    return it.__ms_hasnext__()/#[CNode]261
+    Primitive::Return{prim_type=1}(%2)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1435)/    return it.__ms_hasnext__()/#[CNode]262
+}
+# order:
+#   1: hasnext.129:[CNode]260{[0]: ValueNode<Primitive> getattr, [1]: it, [2]: ValueNode<StringImm> __ms_hasnext__}
+#   2: hasnext.129:[CNode]261{[0]: [CNode]260}
+#   3: hasnext.129:[CNode]262{[0]: ValueNode<Primitive> Return, [1]: [CNode]261}
+
+
+# [No.25] tuple_hasnext.91
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1763)/def tuple_hasnext(xs):/
+funcgraph fg_91(
+        %para105 : Tuple[Func*2]    # xs
+    ) {
+    %1 : Func = Primitive::resolve{prim_type=1}(NameSpace::Ast, gt)    #(ExternalType, ExternalType) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(0)/#[CNode]263
+    %2 : Func = Primitive::resolve{prim_type=1}(NameSpace::SymbolStr, len)    #(ExternalType, ExternalType) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1765)/    return len(xs) > 0/#[CNode]264
+    %3 : I64 = %2(%para105)    #(Tuple[Func*2]) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1765)/    return len(xs) > 0/#[CNode]265
+
+#------------------------> 27
+    %4 = %1(%3, I64(0))    #(I64, I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1765)/    return len(xs) > 0/#[CNode]266
+    Primitive::Return{prim_type=1}(%4)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_backbone-NestedUNet/conv10-UnetConv2d/convs-SequentialCell
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/_extends/parse/standard_method.py(1765)/    return len(xs) > 0/#[CNode]267
+}
+# order:
+#   1: tuple_hasnext.91:[CNode]268{[0]: ValueNode<Primitive> resolve, [1]: ValueNode<NameSpace> CommonOPS, [2]: ValueNode<Symbol> MakeTuple}
+#   2: tuple_hasnext.91:[CNode]269{[0]: [CNode]268, [1]: xs}
+#   3: tuple_hasnext.91:[CNode]265{[0]: [CNode]264, [1]: xs}
+#   4: tuple_hasnext.91:[CNode]266{[0]: [CNode]263, [1]: [CNode]265, [2]: ValueNode<Int64Imm> 0}
+#   5: tuple_hasnext.91:[CNode]267{[0]: ValueNode<Primitive> Return, [1]: [CNode]266}
+
+
+# [No.26] _greater_scalar.130
+# In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/ops/composite/multitype_ops/greater_impl.py(26)/def _greater_scalar(x, y):/
+funcgraph fg_130(
+        %para106 : I64    # x
+        , %para107 : I64    # y
+    ) {
+
+#------------------------> 29
+    %1 = Primitive::resolve{prim_type=1}(NameSpace::SymbolStr, F)    #(ExternalType, ExternalType) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_loss_fn-MultiCrossEntropyWithLogits
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/ops/composite/multitype_ops/greater_impl.py(37)/    return F.scalar_gt(x, y)/#[CNode]270
+    %2 = Primitive::getattr{prim_type=1}(%1, "scalar_gt")    #(Undefined, String) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_loss_fn-MultiCrossEntropyWithLogits
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/ops/composite/multitype_ops/greater_impl.py(37)/    return F.scalar_gt(x, y)/#[CNode]271
+    %3 = %2(%para106, %para107)    #(I64, I64) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_loss_fn-MultiCrossEntropyWithLogits
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/ops/composite/multitype_ops/greater_impl.py(37)/    return F.scalar_gt(x, y)/#[CNode]272
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-TrainOneStepCell/network-WithLossCell/_loss_fn-MultiCrossEntropyWithLogits
+      # In file /home/ma-user/miniconda3/envs/MindSpore-python3.7-aarch64/lib/python3.7/site-packages/mindspore/ops/composite/multitype_ops/greater_impl.py(37)/    return F.scalar_gt(x, y)/#[CNode]273
+}
+# order:
+#   1: _greater_scalar.130:[CNode]270{[0]: ValueNode<Primitive> resolve, [1]: ValueNode<NameSpace> SymbolStr, [2]: ValueNode<Symbol> F}
+#   2: _greater_scalar.130:[CNode]271{[0]: ValueNode<Primitive> getattr, [1]: [CNode]270, [2]: ValueNode<StringImm> scalar_gt}
+#   3: _greater_scalar.274:[CNode]275{[0]: ValueNode<Primitive> resolve, [1]: ValueNode<NameSpace> CommonOPS, [2]: ValueNode<Symbol> MakeTuple}
+#   4: _greater_scalar.274:[CNode]276{[0]: [CNode]275, [1]: x, [2]: y}
+#   5: _greater_scalar.130:[CNode]272{[0]: [CNode]271, [1]: x, [2]: y}
+#   6: _greater_scalar.130:[CNode]273{[0]: ValueNode<Primitive> Return, [1]: [CNode]272}
+
+
+#===============================================================================
+# num of function graphs in stack: 30

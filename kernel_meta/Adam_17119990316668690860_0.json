@@ -1,0 +1,24 @@
+{
+    "binFileName":"Adam_17119990316668690860_0",
+    "binFileSuffix":".o",
+    "blockDim":1,
+    "kernelName":"Adam_17119990316668690860_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"10d2e1e66917ffe72ac1f7211bcd308758bb321aefd8591aecfc7d01e27c3baa"
+}
