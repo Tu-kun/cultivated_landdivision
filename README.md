@@ -92,9 +92,9 @@ https://github.com/Tu-kun/cultivated_landdivision
 ```python train.py --data_path=dataset/ --config_path=unet.yaml --output ./output```
 ### 3.3.2 训练精度结果
 在华为的ModerArts Ascend910平台上，训练中最大FWIou的值为0.39914
-![](doc/result.png)
+![](doc/result.png)  
 验证精度（此处数据集较小）  
-![](doc/val.jpg)
+![](doc/val.jpg)  
  
 ## 3.4 模型评估
 ```
