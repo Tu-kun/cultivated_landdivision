@@ -13,7 +13,7 @@ enable_profiling: False
 
 # ==============================================================================
 # Training options
-model_name: "unet_nested"
+model_name: "unet_simple"
 include_background: True
 run_eval: True
 save_best_ckpt: True
@@ -23,22 +23,22 @@ eval_metrics: FWIOU
 run_distribute: False
 dataset: "ISBI"
 multiclass: True
-patch_size: [256, 256]
-patch_stride: 128
+patch_size: [128, 128]
+patch_stride: 64
 crop: None
-image_size : [256, 256]
+image_size : [128, 128]
 lr: 0.001
 epochs: 400
 repeat: 1
 distribute_epochs: 1600
-batch_size: 16
-cross_valid_ind: 1
+batch_size: 32
+cross_valid_ind: 5
 num_classes: 2
 num_channels: 3
 weight_decay: 0.0005
 loss_scale: 1024.0
 FixedLossScaleManager: 1024.0
-use_ds: True
+use_ds: False
 use_bn: True
 use_deconv: True
 resume: False

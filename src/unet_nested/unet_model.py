@@ -24,7 +24,7 @@ class NestedUNet(nn.Cell):
     """
     Nested unet
     """
-    def __init__(self, in_channel, n_class=2, feature_scale=2, use_deconv=True, use_bn=True, use_ds=True):
+    def __init__(self, in_channel, n_class=2, feature_scale=4, use_deconv=True, use_bn=True, use_ds=True):
         super(NestedUNet, self).__init__()
         self.in_channel = in_channel
         self.n_class = n_class
@@ -102,7 +102,7 @@ class UNet(nn.Cell):
     """
     Simple UNet with skip connection
     """
-    def __init__(self, in_channel, n_class=2, feature_scale=2, use_deconv=True, use_bn=True):
+    def __init__(self, in_channel, n_class=2, feature_scale=4, use_deconv=True, use_bn=True):
         super(UNet, self).__init__()
         self.in_channel = in_channel
         self.n_class = n_class
